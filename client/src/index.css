@@ -1,0 +1,282 @@
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .all-\[unset\] {
+    all: unset;
+  }
+}
+
+:root {
+  --form-checkbox-label-font-family: "Montaga", Helvetica;
+  --form-checkbox-label-font-size: 14px;
+  --form-checkbox-label-font-style: normal;
+  --form-checkbox-label-font-weight: 400;
+  --form-checkbox-label-letter-spacing: 0px;
+  --form-checkbox-label-line-height: 16px;
+  --form-input-placeholder-font-family: "Montaga", Helvetica;
+  --form-input-placeholder-font-size: 15px;
+  --form-input-placeholder-font-style: normal;
+  --form-input-placeholder-font-weight: 400;
+  --form-input-placeholder-letter-spacing: 0px;
+  --form-input-placeholder-line-height: 28px;
+  --form-label-font-family: "Montaga", Helvetica;
+  --form-label-font-size: 14px;
+  --form-label-font-style: normal;
+  --form-label-font-weight: 400;
+  --form-label-letter-spacing: 0px;
+  --form-label-line-height: 170%;
+  --heading-all-caps-h6-desktop-font-family: "Montaga", Helvetica;
+  --heading-all-caps-h6-desktop-font-size: 18px;
+  --heading-all-caps-h6-desktop-font-style: normal;
+  --heading-all-caps-h6-desktop-font-weight: 400;
+  --heading-all-caps-h6-desktop-letter-spacing: 0px;
+  --heading-all-caps-h6-desktop-line-height: 100%;
+  --heading-medium-h2-desktop-font-family: "Montaga", Helvetica;
+  --heading-medium-h2-desktop-font-size: 56px;
+  --heading-medium-h2-desktop-font-style: normal;
+  --heading-medium-h2-desktop-font-weight: 400;
+  --heading-medium-h2-desktop-letter-spacing: 0px;
+  --heading-medium-h2-desktop-line-height: 100%;
+  --heading-small-h3-desktop-font-family: "Montaga", Helvetica;
+  --heading-small-h3-desktop-font-size: 43px;
+  --heading-small-h3-desktop-font-style: normal;
+  --heading-small-h3-desktop-font-weight: 400;
+  --heading-small-h3-desktop-letter-spacing: 0px;
+  --heading-small-h3-desktop-line-height: 100%;
+  --heading-tiny-h5-desktop-font-family: "Montaga", Helvetica;
+  --heading-tiny-h5-desktop-font-size: 24px;
+  --heading-tiny-h5-desktop-font-style: normal;
+  --heading-tiny-h5-desktop-font-weight: 400;
+  --heading-tiny-h5-desktop-letter-spacing: 0px;
+  --heading-tiny-h5-desktop-line-height: 100%;
+  --heading-xlarge-desktop-font-family: "Montaga", Helvetica;
+  --heading-xlarge-desktop-font-size: 101px;
+  --heading-xlarge-desktop-font-style: normal;
+  --heading-xlarge-desktop-font-weight: 400;
+  --heading-xlarge-desktop-letter-spacing: 0px;
+  --heading-xlarge-desktop-line-height: 100%;
+  --heading-xsmall-h4-desktop-400-font-family: "Montaga", Helvetica;
+  --heading-xsmall-h4-desktop-400-font-size: 32px;
+  --heading-xsmall-h4-desktop-400-font-style: normal;
+  --heading-xsmall-h4-desktop-400-font-weight: 400;
+  --heading-xsmall-h4-desktop-400-letter-spacing: 0px;
+  --heading-xsmall-h4-desktop-400-line-height: 100%;
+  --link-button-font-family: "Montaga", Helvetica;
+  --link-button-font-size: 22px;
+  --link-button-font-style: normal;
+  --link-button-font-weight: 400;
+  --link-button-letter-spacing: 0px;
+  --link-button-line-height: 24px;
+  --link-nav-font-family: "Montaga", Helvetica;
+  --link-nav-font-size: 22px;
+  --link-nav-font-style: normal;
+  --link-nav-font-weight: 400;
+  --link-nav-letter-spacing: 0px;
+  --link-nav-line-height: 32px;
+  --neutralbackground: rgba(252, 249, 247, 1);
+  --neutraltext-primary: rgba(43, 17, 5, 1);
+  --text-base-all-breakpoints-font-family: "Montaga", Helvetica;
+  --text-base-all-breakpoints-font-size: 18px;
+  --text-base-all-breakpoints-font-style: normal;
+  --text-base-all-breakpoints-font-weight: 400;
+  --text-base-all-breakpoints-letter-spacing: 0px;
+  --text-base-all-breakpoints-line-height: 160%;
+  --text-medium-desktop-font-family: "Montaga", Helvetica;
+  --text-medium-desktop-font-size: 22px;
+  --text-medium-desktop-font-style: normal;
+  --text-medium-desktop-font-weight: 400;
+  --text-medium-desktop-letter-spacing: 0px;
+  --text-medium-desktop-line-height: 160%;
+  --wedding-colorsprimary: rgba(198, 117, 77, 1);
+}
+
+:root {
+  --animate-spin: spin 1s linear infinite;
+}
+
+.animate-fade-in {
+  animation: fade-in 1s var(--animation-delay, 0s) ease forwards;
+}
+
+.animate-fade-up {
+  animation: fade-up 1s var(--animation-delay, 0s) ease forwards;
+}
+
+.animate-marquee {
+  animation: marquee var(--duration) infinite linear;
+}
+
+.animate-marquee-vertical {
+  animation: marquee-vertical var(--duration) linear infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 8s infinite;
+}
+
+.animate-spin {
+  animation: var(--animate-spin);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes image-glow {
+  0% {
+    opacity: 0;
+    animation-timing-function: cubic-bezier(0.74, 0.25, 0.76, 1);
+  }
+
+  10% {
+    opacity: 0.7;
+    animation-timing-function: cubic-bezier(0.12, 0.01, 0.08, 0.99);
+  }
+
+  to {
+    opacity: 0.4;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes shimmer {
+  0%,
+  90%,
+  to {
+    background-position: calc(-100% - var(--shimmer-width)) 0;
+  }
+
+  30%,
+  60% {
+    background-position: calc(100% + var(--shimmer-width)) 0;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(0);
+  }
+
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+@keyframes marquee-vertical {
+  0% {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+  }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+
+    --card: transparent;
+    --card-foreground: 222.2 47.4% 11.2%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 215 20.2% 65.1%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+
+    --muted: 223 47% 11%;
+    --muted-foreground: 215.4 16.3% 56.9%;
+
+    --accent: 216 34% 17%;
+    --accent-foreground: 210 40% 98%;
+
+    --popover: 224 71% 4%;
+    --popover-foreground: 215 20.2% 65.1%;
+
+    --border: 216 34% 17%;
+    --input: 216 34% 17%;
+
+    --card: transparent;
+    --card-foreground: 213 31% 91%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 1.2%;
+
+    --secondary: 222.2 47.4% 11.2%;
+    --secondary-foreground: 210 40% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 216 34% 17%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
