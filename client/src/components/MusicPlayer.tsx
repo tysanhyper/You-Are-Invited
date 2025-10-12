@@ -51,7 +51,7 @@ const MusicPlayer: React.FC = () => {
       <div className="bg-white/90 backdrop-blur-md rounded-full p-4 shadow-2xl border border-gray-200 flex items-center gap-3">
         <audio
           ref={audioRef}
-          src="/For%20A%20Reason%20%28Official%20Video%29%20Karan%20Aujla%20%20Tania%20%20%20Ikky%20%20Latest%20Punjabi%20Songs%202025%20-%20Rehaan%20Records-%5BAudioTrimmer.com%5D.mp3"
+          src="/Ed Sheeran - Perfect - LatinHype.mp3"
           loop
           preload="metadata"
           autoPlay
