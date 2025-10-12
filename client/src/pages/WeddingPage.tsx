@@ -295,6 +295,47 @@ const WeddingPage = () => {
           </motion.div>
         </div>
       </section>
+       {/* Itinerary Section */}
+      <section
+        id="itinerary"
+        ref={(el) => (observerRefs.current["itinerary"] = el)}
+        className={`py-20 px-8 bg-gradient-to-b from-gray-50 to-white scroll-mt-24 transition-all duration-1000 ${
+          isVisible["itinerary"] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}
+      >
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-6xl font-['Montaga'] text-transparent bg-clip-text bg-gradient-to-r from-[#2B1105] to-[#C6754D]">Itinerary</h2>
+          </div>
+          <div className="space-y-12">
+            {[
+              { time: "4:00 PM,", title: "Ring Ceremony & Sangeet", description: "On 3rd December,Join us for the wedding ceremony at the Aniket garden. Please arrive 15 minutes early to find your seat.", icon: "💍" },
+              { time: "11:00 AM", title: "Muscical Phere", description: "On 4th December, Join us for Melodious Phere in Royal Kesari Hall for a night where every beat, note, and harmony tells our love story.", icon: "🥂" },
+              { time: "7:00 PM", title: "Reception", description: "On 4 December, Join us at the Reception in Royal Kesari Hall for an evening of love, laughter, and celebration as we begin our life together.", icon: "🎉" }
+            ].map((event, idx) => (
+              <div
+                key={idx}
+                className={`flex gap-8 items-start group transition-all duration-700 ${
+                  isVisible["itinerary"] ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
+                }`}
+                style={{ transitionDelay: `${idx * 150}ms` }}
+              >
+                <div className="relative flex-shrink-0">
+                  <div className="absolute -inset-2 bg-gradient-to-r from-[#C6754D] to-[#6B2C2C] rounded-full blur-md opacity-0 group-hover:opacity-50 transition duration-500"></div>
+                  <div className="relative w-24 h-24 rounded-full border-2 border-[#C6754D] bg-white flex flex-col items-center justify-center group-hover:bg-gradient-to-br group-hover:from-[#C6754D] group-hover:to-[#A85D3F] group-hover:scale-110 group-hover:border-0 transition-all duration-500 shadow-lg">
+                    <span className="text-[#C6754D] text-xs font-['Montaga'] group-hover:text-white transition-colors duration-300">{event.time}</span>
+                    <span className="text-2xl mt-1 group-hover:scale-125 transition-transform duration-300">{event.icon}</span>
+                  </div>
+                </div>
+                <div className="flex-grow">
+                  <h3 className="text-3xl font-['Montaga'] text-[#2B1105] mb-3 group-hover:text-[#C6754D] transition-colors duration-300">{event.title}</h3>
+                  <p className="text-lg text-[#2B1105] opacity-80 leading-relaxed">{event.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
       {/* Venue Section */}
       <section 
         id="venue" 
@@ -342,48 +383,6 @@ const WeddingPage = () => {
           </div>
         </div>
       </section>
-      {/* Itinerary Section */}
-      <section
-        id="itinerary"
-        ref={(el) => (observerRefs.current["itinerary"] = el)}
-        className={`py-20 px-8 bg-gradient-to-b from-gray-50 to-white scroll-mt-24 transition-all duration-1000 ${
-          isVisible["itinerary"] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        }`}
-      >
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-6xl font-['Montaga'] text-transparent bg-clip-text bg-gradient-to-r from-[#2B1105] to-[#C6754D]">Itinerary</h2>
-          </div>
-          <div className="space-y-12">
-            {[
-              { time: "4:00 PM,", title: "Ring Ceremony & Sangeet", description: "On 3rd December,Join us for the wedding ceremony at the Aniket garden. Please arrive 15 minutes early to find your seat.", icon: "💍" },
-              { time: "11:00 AM", title: "Muscical Phere", description: "On 4th December, Join us for Melodious Phere in Royal Kesari Hall for a night where every beat, note, and harmony tells our love story.", icon: "🥂" },
-              { time: "7:00 PM", title: "Reception", description: "On 4 December, Join us at the Reception in Royal Kesari Hall for an evening of love, laughter, and celebration as we begin our life together.", icon: "🎉" }
-            ].map((event, idx) => (
-              <div
-                key={idx}
-                className={`flex gap-8 items-start group transition-all duration-700 ${
-                  isVisible["itinerary"] ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
-                }`}
-                style={{ transitionDelay: `${idx * 150}ms` }}
-              >
-                <div className="relative flex-shrink-0">
-                  <div className="absolute -inset-2 bg-gradient-to-r from-[#C6754D] to-[#6B2C2C] rounded-full blur-md opacity-0 group-hover:opacity-50 transition duration-500"></div>
-                  <div className="relative w-24 h-24 rounded-full border-2 border-[#C6754D] bg-white flex flex-col items-center justify-center group-hover:bg-gradient-to-br group-hover:from-[#C6754D] group-hover:to-[#A85D3F] group-hover:scale-110 group-hover:border-0 transition-all duration-500 shadow-lg">
-                    <span className="text-[#C6754D] text-xs font-['Montaga'] group-hover:text-white transition-colors duration-300">{event.time}</span>
-                    <span className="text-2xl mt-1 group-hover:scale-125 transition-transform duration-300">{event.icon}</span>
-                  </div>
-                </div>
-                <div className="flex-grow">
-                  <h3 className="text-3xl font-['Montaga'] text-[#2B1105] mb-3 group-hover:text-[#C6754D] transition-colors duration-300">{event.title}</h3>
-                  <p className="text-lg text-[#2B1105] opacity-80 leading-relaxed">{event.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <ImageMarquee />
 
       {/* RSVP Section */}
