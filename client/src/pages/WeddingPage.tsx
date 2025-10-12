@@ -103,22 +103,15 @@ const WeddingPage = () => {
         <div className="absolute bottom-1/2 left-1/2 text-4xl opacity-10 animate-float" style={{ animationDelay: '2.8s' }}>✨</div>
         <div className="absolute top-2/5 right-2/3 text-4xl opacity-10 animate-float" style={{ animationDelay: '0.6s' }}>💕</div>
         <div className="absolute bottom-2/5 left-3/4 text-4xl opacity-10 animate-float" style={{ animationDelay: '1.4s' }}>✨</div>
+        </div>
+
+      {/* Logo Section */}
+      <div className="flex justify-center py-8">
+        <img src="https://github.com/tysanhyper/wedding-invitation/blob/main/logo.png?raw=true" alt="Logo" className="w-20 h-20 rounded-full hover:scale-110 transition-all duration-300" />
       </div>
 
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-xl shadow-lg border-b border-gray-100 transition-all duration-300 animate-fade-in">
-        <div className="flex items-center justify-center gap-8 px-8 py-6">
-          <a href="#home" className="text-[#2B1105] text-lg font-['Montaga'] opacity-60 hover:opacity-100 hover:scale-110 transition-all duration-300 transform relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#C6754D] hover:after:w-full after:transition-all after:duration-300">Home</a>
-          <a href="#our-story" className="text-[#2B1105] text-lg font-['Montaga'] opacity-60 hover:opacity-100 hover:scale-110 transition-all duration-300 transform relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#C6754D] hover:after:w-full after:transition-all after:duration-300">Our Story</a>
-          <img src="https://github.com/tysanhyper/wedding-invitation/blob/main/logo.png?raw=true" alt="Logo" className="w-12 h-12 rounded-full hover:scale-110 transition-all duration-300 -mr-2" />
-          <a href="#venue" className="text-[#2B1105] text-lg font-['Montaga'] opacity-60 hover:opacity-100 hover:scale-110 transition-all duration-300 transform relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#C6754D] hover:after:w-full after:transition-all after:duration-300">Events</a>
-          <a href="#bridal-party" className="text-[#2B1105] text-lg font-['Montaga'] opacity-60 hover:opacity-100 hover:scale-110 transition-all duration-300 transform relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#C6754D] hover:after:w-full after:transition-all after:duration-300">Guests</a>
-          <a href="#rsvp" className="text-[#2B1105] text-lg font-['Montaga'] opacity-60 hover:opacity-100 hover:scale-110 transition-all duration-300 transform relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#C6754D] hover:after:w-full after:transition-all after:duration-300">RSVP</a>
-        </div>
-      </nav>
-
       {/* Hero Section */}
-      <section id="home" className="relative flex flex-col items-center py-32 px-8 mt-20 scroll-mt-24">
+      <section id="home" className="relative flex flex-col items-center py-32 px-8 mt-0 scroll-mt-24">
         <div className="absolute top-10 left-1/4 text-6xl opacity-10 animate-float">✨</div>
         <div className="absolute bottom-20 right-1/4 text-6xl opacity-10 animate-float" style={{ animationDelay: '2s' }}>💕</div>
         
