@@ -23,10 +23,10 @@ const ImageMarquee = () => {
     x.set(offset);
   }, [x]);
 
-  // Auto-scroll animation: move left continuously (3x faster)
+  // Auto-scroll animation: move left continuously (2x faster)
   useEffect(() => {
     const animate = () => {
-      x.set(x.get() - 3); // Move 3px every frame for 3x faster animation
+      x.set(x.get() - 2); // Move 2px every frame for 2x faster animation
       requestAnimationFrame(animate);
     };
     animate();
