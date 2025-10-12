@@ -25,12 +25,19 @@ const ImageMarquee = () => {
 
   // Auto-scroll animation: move left continuously (2x faster)
   useEffect(() => {
+    let animationId: number;
     const animate = () => {
       x.set(x.get() - 2); // Move 2px every frame for 2x faster animation
-      requestAnimationFrame(animate);
+      animationId = requestAnimationFrame(animate);
     };
     animate();
-  }, [x]);
+
+    return () => {
+      if (animationId) {
+        cancelAnimationFrame(animationId);
+      }
+    };
+  }, []);
 
   // Mouse wheel support
   useEffect(() => {
