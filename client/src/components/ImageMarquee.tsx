@@ -19,7 +19,7 @@ const ImageMarquee = () => {
         <p className="text-[#2B1105]/60">Cherished moments captured in time</p>
       </div>
       <motion.div
-        className="flex space-x-8"
+        className="flex space-x-8 cursor-grab active:cursor-grabbing"
         animate={{ x: ["0%", "-100%"] }}
         transition={{
           duration: 40,
@@ -27,6 +27,10 @@ const ImageMarquee = () => {
           ease: "linear"
         }}
         whileHover={{ animationPlayState: "paused" }}
+        drag="x"
+        dragConstraints={{ left: -1000, right: 1000 }}
+        dragElastic={0.1}
+        whileDrag={{ scale: 1.02 }}
       >
         {duplicated.map((img, idx) => (
           <img
