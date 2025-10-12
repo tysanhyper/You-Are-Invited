@@ -33,17 +33,14 @@ const WeddingPage = () => {
     {
       name: "Haldi",
       description: "Join us for the Haldi ceremony on 3rd December 10:00AM in aniket garden for a vibrant celebration of love, laughter, where family and friends come together to bless the couple for their beautiful journey.",
-      buttonText: "Learn More"
     },
     {
       name: "Ring ceremony & Sangeet",
       description: "Celebrate with us as we begin our journey together! The Ring Ceremony marks the promise of forever, followed by the Mahila Sangeet — a joyous evening of music, dance, and laughter with our loved ones.",
-      buttonText: "Learn More"
     },
     {
       name: "Phere and Reception",
       description: "Join us for the sacred Phere, pledging a lifetime of love, followed by the Reception — an evening of laughter, music, and cherished memories as we begin our new chapter together.",
-      buttonText: "Learn More"
     }
   ];
 
