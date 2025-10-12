@@ -106,7 +106,7 @@ const WeddingPage = () => {
         </div>
 
       {/* Logo Section */}
-      <div className="flex justify-center py-8">
+      <div className="flex justify-center py-4">
         <img src="https://github.com/tysanhyper/wedding-invitation/blob/main/logo.png?raw=true" alt="Logo" className="w-28 h-28 rounded-full hover:scale-110 transition-all duration-300" />
       </div>
 
