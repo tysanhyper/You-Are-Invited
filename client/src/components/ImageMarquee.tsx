@@ -5,7 +5,9 @@ const ImageMarquee = () => {
   const images = [
     "/IMG-20251012-WA0032.jpg",
     "/IMG-20251012-WA0035.jpg",
-    "/IMG-20251012-WA0036.jpg"
+    "/IMG-20251012-WA0036.jpg",
+    "/1",
+    "/2"
   ];
 
   // Duplicate images for infinite loop: duplicates on both ends
