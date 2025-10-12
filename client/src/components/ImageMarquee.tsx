@@ -9,7 +9,8 @@ const ImageMarquee = () => {
     "/IMG-20251012-WA0036.jpg"
   ];
 
-  const duplicated = [...images, ...images];
+  // Duplicate images multiple times for seamless infinite loop
+  const duplicated = [...images, ...images, ...images, ...images];
 
   return (
     <div className="overflow-hidden relative py-12 bg-gradient-to-r from-gray-50 to-white">
@@ -18,28 +19,23 @@ const ImageMarquee = () => {
         <p className="text-[#2B1105]/60">Cherished moments captured in time</p>
       </div>
       <motion.div
-        className="flex space-x-8 cursor-grab active:cursor-grabbing"
-        animate={{ x: ["0%", "-20%", "-40%", "-60%", "-80%", "-100%", "-80%", "-60%", "-40%", "-20%", "0%"] }}
+        className="flex space-x-8"
+        animate={{ x: ["0%", "-100%"] }}
         transition={{
           duration: 40,
           repeat: Infinity,
-          ease: "easeInOut"
+          ease: "linear"
         }}
-        drag="x"
-        dragConstraints={{ left: -200000, right: 200000 }}
-        dragElastic={0.1}
-        whileDrag={{ scale: 1.05 }}
+        whileHover={{ animationPlayState: "paused" }}
       >
-        {Array.from({ length: 50 }, (_, i) =>
-          duplicated.map((img, idx) => (
-            <img
-              key={`${i}-${idx}`}
-              src={img}
-              alt={`Marquee ${i}-${idx}`}
-              className="w-96 h-64 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300"
-            />
-          ))
-        )}
+        {duplicated.map((img, idx) => (
+          <img
+            key={idx}
+            src={img}
+            alt={`Memory ${idx % images.length + 1}`}
+            className="w-64 h-48 sm:w-80 sm:h-60 md:w-96 md:h-64 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 flex-shrink-0"
+          />
+        ))}
       </motion.div>
     </div>
   );
