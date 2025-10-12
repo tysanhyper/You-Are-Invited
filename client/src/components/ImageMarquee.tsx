@@ -9,6 +9,8 @@ const ImageMarquee = () => {
     "/IMG-20251012-WA0036.jpg"
   ];
 
+  const duplicated = [...images, ...images];
+
   return (
     <div className="overflow-hidden relative py-12 bg-gradient-to-r from-gray-50 to-white">
       <div className="text-center mb-8">
@@ -17,19 +19,19 @@ const ImageMarquee = () => {
       </div>
       <motion.div
         className="flex space-x-8 cursor-grab active:cursor-grabbing"
-        animate={{ x: [0, "-50%"] }}
+        animate={{ x: ["0%", "-20%", "-40%", "-60%", "-80%", "-100%", "-80%", "-60%", "-40%", "-20%", "0%"] }}
         transition={{
-          duration: 10,
+          duration: 40,
           repeat: Infinity,
-          ease: "linear"
+          ease: "easeInOut"
         }}
         drag="x"
-        dragConstraints={{ left: -20000, right: 20000 }}
+        dragConstraints={{ left: -200000, right: 200000 }}
         dragElastic={0.1}
         whileDrag={{ scale: 1.05 }}
       >
-        {Array.from({ length: 10 }, (_, i) =>
-          images.map((img, idx) => (
+        {Array.from({ length: 50 }, (_, i) =>
+          duplicated.map((img, idx) => (
             <img
               key={`${i}-${idx}`}
               src={img}

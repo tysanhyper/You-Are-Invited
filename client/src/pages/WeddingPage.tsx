@@ -367,9 +367,9 @@ const WeddingPage = () => {
           </div>
           <div className="space-y-12">
             {[
-              { time: "4:00 PM", title: "Ring Ceremony & Sangeet", description: "Join us for the wedding ceremony at the Aniket garden on 3rd December . Please arrive 15 minutes early to find your seat.", icon: "💍" },
-              { time: "11:00 AM", title: "Muscical Phere", description: "Join us for Melodious Phere in Royal Kesari Hall for a night where every beat, note, and harmony tells our love story.", icon: "🥂" },
-              { time: "7:00 PM", title: "Reception", description: "Join us at the Reception in Royal Kesari Hall on 4 December for an evening of love, laughter, and celebration as we begin our life together.", icon: "🎉" }
+              { time: "4:00 PM,", title: "Ring Ceremony & Sangeet", description: "On 3rd December,Join us for the wedding ceremony at the Aniket garden. Please arrive 15 minutes early to find your seat.", icon: "💍" },
+              { time: "11:00 AM", title: "Muscical Phere", description: "On 4th December, Join us for Melodious Phere in Royal Kesari Hall for a night where every beat, note, and harmony tells our love story.", icon: "🥂" },
+              { time: "7:00 PM", title: "Reception", description: "On 4 December, Join us at the Reception in Royal Kesari Hall for an evening of love, laughter, and celebration as we begin our life together.", icon: "🎉" }
             ].map((event, idx) => (
               <div
                 key={idx}
