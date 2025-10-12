@@ -16,13 +16,17 @@ const ImageMarquee = () => {
         <p className="text-[#2B1105]/60">Cherished moments captured in time</p>
       </div>
       <motion.div
-        className="flex space-x-8"
+        className="flex space-x-8 cursor-grab active:cursor-grabbing"
         animate={{ x: [0, "-50%"] }}
         transition={{
           duration: 10,
           repeat: Infinity,
           ease: "linear"
         }}
+        drag="x"
+        dragConstraints={{ left: -1000, right: 1000 }}
+        dragElastic={0.1}
+        whileDrag={{ scale: 1.05 }}
       >
         {images.map((img, idx) => (
           <img
