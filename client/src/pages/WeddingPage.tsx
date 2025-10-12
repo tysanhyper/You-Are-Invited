@@ -227,8 +227,8 @@ const WeddingPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-center">
             {[
               { name: "Groom's Mom", subtitle: "Mother of the Groom" },
-              { name: "Groom's Dad", subtitle: "Father of the Groom" },
-              { name: "Man of Honor", subtitle: "Brother" }
+              { name: "Man of Honor", subtitle: "Brother" },
+              { name: "Groom's Dad", subtitle: "Father of the Groom" }
             ].map((person, idx) => (
               <div
                 key={idx}
@@ -241,7 +241,7 @@ const WeddingPage = () => {
                   <div className="absolute -inset-2 bg-gradient-to-r from-[#C6754D] to-[#6B2C2C] rounded-full blur-md opacity-0 group-hover:opacity-50 transition duration-500"></div>
                   <div className="relative w-40 h-40 rounded-full overflow-hidden ring-4 ring-white shadow-xl group-hover:ring-[#C6754D] transition-all duration-500">
                     <img
-                      src={idx === 0 ? "https://raw.githubusercontent.com/tysanhyper/wedding-invitation/645a227446626ff8d0a8e51f679af2a6dde98c61/mom.jpg" : idx === 1 ? "https://raw.githubusercontent.com/tysanhyper/wedding-invitation/ad9dd2f4f3a11aaf91dcdbe352f3091c846aa037/me.jpg" : idx === 2 ? "https://raw.githubusercontent.com/tysanhyper/wedding-invitation/02ff5f2dc8c5d76ba01a4af9b21424dbcae6fd57/dad.jpg" : `https://images.unsplash.com/photo-${idx % 2 === 0 ? '1507003211169-0a1dd7228f2d' : '1506794778202-cad84cf45f1d'}?w=200&h=200&fit=crop&crop=faces`}
+                      src={idx === 0 ? "https://raw.githubusercontent.com/tysanhyper/wedding-invitation/645a227446626ff8d0a8e51f679af2a6dde98c61/mom.jpg" : idx === 1 ? "https://raw.githubusercontent.com/tysanhyper/wedding-invitation/02ff5f2dc8c5d76ba01a4af9b21424dbcae6fd57/dad.jpg" : idx === 2 ? "https://raw.githubusercontent.com/tysanhyper/wedding-invitation/ad9dd2f4f3a11aaf91dcdbe352f3091c846aa037/me.jpg" : `https://images.unsplash.com/photo-${idx % 2 === 0 ? '1507003211169-0a1dd7228f2d' : '1506794778202-cad84cf45f1d'}?w=200&h=200&fit=crop&crop=faces`}
                       alt={person.name}
                       className={`w-full h-full ${(idx === 0 || idx === 1 || idx === 2) ? 'object-cover object-[position:center_10%]' : 'object-cover'} group-hover:scale-110 transition-transform duration-500`}
                     />
