@@ -41,7 +41,7 @@ const WeddingPage = () => {
       buttonText: "Learn More"
     },
     {
-      name: "phere and Reception",
+      name: "Phere and Reception",
       description: "Join us for the sacred Phere, pledging a lifetime of love, followed by the Reception — an evening of laughter, music, and cherished memories as we begin our new chapter together.",
       buttonText: "Learn More"
     }
