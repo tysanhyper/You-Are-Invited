@@ -19,7 +19,7 @@ const ImageMarquee = () => {
         className="flex space-x-8"
         animate={{ x: [0, "-50%"] }}
         transition={{
-          duration: 30,
+          duration: 10,
           repeat: Infinity,
           ease: "linear"
         }}
