@@ -10,7 +10,7 @@ const ImageMarquee = () => {
   ];
 
   return (
-    <div className="overflow-hidden py-12 bg-gradient-to-r from-gray-50 to-white">
+    <div className="overflow-hidden relative py-12 bg-gradient-to-r from-gray-50 to-white">
       <div className="text-center mb-8">
         <h2 className="text-4xl font-['Montaga'] text-transparent bg-clip-text bg-gradient-to-r from-[#2B1105] to-[#C6754D] mb-4">Our Memories</h2>
         <p className="text-[#2B1105]/60">Cherished moments captured in time</p>
@@ -24,7 +24,7 @@ const ImageMarquee = () => {
           ease: "linear"
         }}
         drag="x"
-        dragConstraints={{ left: -1000, right: 1000 }}
+        dragConstraints={{ left: -2000, right: 2000 }}
         dragElastic={0.1}
         whileDrag={{ scale: 1.05 }}
       >
