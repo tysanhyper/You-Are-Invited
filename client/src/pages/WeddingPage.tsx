@@ -227,8 +227,8 @@ const WeddingPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-center">
             {[
               { name: "Groom's Mom", subtitle: "Mother of the Groom" },
-              { name: "Man of Honor", subtitle: "Brother" },
-              { name: "Groom's Dad", subtitle: "Father of the Groom" }
+              { name: "Groom's Dad", subtitle: "Father of the Groom" },
+              { name: "Man of Honor", subtitle: "Brother" }
             ].map((person, idx) => (
               <div
                 key={idx}
