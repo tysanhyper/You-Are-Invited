@@ -24,7 +24,7 @@ const ImageMarquee = () => {
           ease: "linear"
         }}
         drag="x"
-        dragConstraints={{ left: -10000, right: 10000 }}
+        dragConstraints={{ left: -20000, right: 20000 }}
         dragElastic={0.1}
         whileDrag={{ scale: 1.05 }}
       >
