@@ -105,16 +105,16 @@ const WeddingPage = () => {
         <div className="absolute bottom-2/5 left-3/4 text-4xl opacity-10 animate-float" style={{ animationDelay: '1.4s' }}>✨</div>
         </div>
 
-      {/* Logo Section */}
-      <div className="flex justify-center py-4">
-        <img src="https://github.com/tysanhyper/wedding-invitation/blob/main/logo.png?raw=true" alt="Logo" className="w-28 h-28 rounded-full hover:scale-110 transition-all duration-300" />
-      </div>
-
       {/* Hero Section */}
       <section id="home" className="relative flex flex-col items-center py-32 px-8 mt-0 scroll-mt-24">
         <div className="absolute top-10 left-1/4 text-6xl opacity-10 animate-float">✨</div>
         <div className="absolute bottom-20 right-1/4 text-6xl opacity-10 animate-float" style={{ animationDelay: '2s' }}>💕</div>
-        
+
+        {/* Logo above Celebrate With Us */}
+        <div className="flex justify-center mb-6 opacity-0 animate-fade-in" style={{ animationDelay: '50ms', animationFillMode: 'forwards' }}>
+          <img src="https://github.com/tysanhyper/wedding-invitation/blob/main/logo.png?raw=true" alt="Logo" className="w-20 h-20 rounded-full hover:scale-110 transition-all duration-300" />
+        </div>
+
         <div className="text-center mb-8 opacity-0 animate-fade-in" style={{ animationDelay: '100ms', animationFillMode: 'forwards' }}>
           <p className="text-[#C6754D] text-xl font-['Montaga'] tracking-widest uppercase">Celebrate With Us</p>
         </div>
