@@ -119,7 +119,7 @@ const WeddingPage = () => {
           <p className="text-[#C6754D] text-xl font-['Montaga'] tracking-widest uppercase">Celebrate With Us</p>
         </div>
         
-        <h1 className="text-6xl md:text-8xl font-['Montaga'] text-transparent bg-clip-text bg-gradient-to-r from-[#2B1105] via-[#C6754D] to-[#2B1105] mb-4 opacity-0 animate-fade-in" style={{ animationDelay: '300ms', animationFillMode: 'forwards' }}>
+        <h1 className="text-4xl md:text-6xl lg:text-8xl font-['Montaga'] text-transparent bg-clip-text bg-gradient-to-r from-[#2B1105] via-[#C6754D] to-[#2B1105] mb-4 opacity-0 animate-fade-in" style={{ animationDelay: '300ms', animationFillMode: 'forwards' }}>
           Yatin & Nisha
         </h1>
 
