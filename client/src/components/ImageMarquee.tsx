@@ -22,7 +22,7 @@ const ImageMarquee = () => {
     const animate = async () => {
       await controls.start({
         x: -100,
-        transition: { duration: 20, ease: "linear" }
+        transition: { duration: 10, ease: "linear" }
       });
       // Reset position for infinite loop
       x.set(0);
