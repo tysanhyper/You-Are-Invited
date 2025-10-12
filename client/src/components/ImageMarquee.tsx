@@ -24,26 +24,20 @@ const ImageMarquee = () => {
           ease: "linear"
         }}
         drag="x"
-        dragConstraints={{ left: -2000, right: 2000 }}
+        dragConstraints={{ left: -10000, right: 10000 }}
         dragElastic={0.1}
         whileDrag={{ scale: 1.05 }}
       >
-        {images.map((img, idx) => (
-          <img
-            key={idx}
-            src={img}
-            alt={`Marquee ${idx}`}
-            className="w-96 h-64 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300"
-          />
-        ))}
-        {images.map((img, idx) => (
-          <img
-            key={`dup-${idx}`}
-            src={img}
-            alt={`Marquee dup ${idx}`}
-            className="w-96 h-64 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300"
-          />
-        ))}
+        {Array.from({ length: 10 }, (_, i) =>
+          images.map((img, idx) => (
+            <img
+              key={`${i}-${idx}`}
+              src={img}
+              alt={`Marquee ${i}-${idx}`}
+              className="w-96 h-64 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300"
+            />
+          ))
+        )}
       </motion.div>
     </div>
   );
