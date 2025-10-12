@@ -4,8 +4,6 @@ import { useEffect, useRef } from "react";
 const ImageMarquee = () => {
   const images = [
     "/IMG-20251012-WA0032.jpg",
-    "/IMG-20251012-WA0033.jpg",
-    "/IMG-20251012-WA0034.jpg",
     "/IMG-20251012-WA0035.jpg",
     "/IMG-20251012-WA0036.jpg"
   ];
