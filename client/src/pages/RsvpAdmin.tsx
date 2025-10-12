@@ -19,7 +19,7 @@ const RsvpAdmin: React.FC = () => {
   const { data: rsvps, isLoading, error } = useQuery<Rsvp[]>({
     queryKey: ["rsvps"],
     queryFn: async () => {
-      const response = await fetch("/api/rsvp");
+      const response = await fetch("/.netlify/functions/api");
       if (!response.ok) {
         throw new Error("Failed to fetch RSVPs");
       }

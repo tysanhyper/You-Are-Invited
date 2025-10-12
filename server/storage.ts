@@ -1,7 +1,7 @@
 import { type User, type InsertUser, users, rsvps } from "@shared/schema";
 import { type Rsvp, type InsertRsvp } from "@shared/rsvpSchema";
-import { drizzle } from "drizzle-orm/neon-http";
-import { neon } from "@netlify/neon";
+import { drizzle } from "drizzle-orm/postgres-js";
+import postgres from "postgres";
 import { eq } from "drizzle-orm";
 
 export interface IStorage {
@@ -18,7 +18,7 @@ export class PostgresStorage implements IStorage {
   private db;
 
   constructor() {
-    const sql = neon(process.env.DATABASE_URL!);
+    const sql = postgres(process.env.DATABASE_URL!);
     this.db = drizzle(sql, { schema: { users, rsvps } });
   }
 

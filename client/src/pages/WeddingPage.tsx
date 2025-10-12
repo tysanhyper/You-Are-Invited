@@ -315,7 +315,7 @@ const WeddingPage = () => {
       >
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-6xl font-['Montaga'] text-transparent bg-clip-text bg-gradient-to-r from-[#2B1105] to-[#C6754D] mb-4">The Bridal Party</h2>
+            <h2 className="text-6xl font-['Montaga'] text-transparent bg-clip-text bg-gradient-to-r from-[#2B1105] to-[#C6754D] mb-4">The Wedding Party</h2>
             <div className="flex items-center justify-center gap-4 mt-4">
               <div className="w-16 h-px bg-gradient-to-r from-transparent to-[#C6754D]"></div>
               <p className="text-[#C6754D] font-['Montaga']">Groomsmen</p>
@@ -326,7 +326,7 @@ const WeddingPage = () => {
             {[
               { name: "Groom's Mom", subtitle: "Mother of the Groom" },
               { name: "Man of Honor", subtitle: "Brother" },
-              { name: "Groom's Dad", subtitle: "Father of the Bride" }
+              { name: "Groom's Dad", subtitle: "Father of the Groom" }
             ].map((person, idx) => (
               <div
                 key={idx}

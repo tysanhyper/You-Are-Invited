@@ -24,7 +24,7 @@ export const WeddingPartySubsection = (): JSX.Element => {
   return (
     <section className="flex flex-col w-full items-start justify-center gap-16 px-20 py-24 bg-neutralbackground">
       <h2 className="font-heading-medium-h2-desktop font-[number:var(--heading-medium-h2-desktop-font-weight)] text-neutraltext-primary text-[length:var(--heading-medium-h2-desktop-font-size)] tracking-[var(--heading-medium-h2-desktop-letter-spacing)] leading-[var(--heading-medium-h2-desktop-line-height)] [font-style:var(--heading-medium-h2-desktop-font-style)]">
-        The Bridal Party
+        The Wedding Party
       </h2>
 
       <Tabs defaultValue="groomsmen" className="w-full">

@@ -68,7 +68,7 @@ export const RsvpSubsection = (): JSX.Element => {
         message,
       };
 
-      const response = await fetch("/api/rsvp", {
+      const response = await fetch("/.netlify/functions/api", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -79,7 +79,7 @@ export const RsvpSubsection = (): JSX.Element => {
       if (response.ok) {
         toast({
           title: "Success",
-          description: "Your RSVP has been submitted successfully!",
+          description: "Your RSVP has been recorded successfully!",
         });
         // Reset form
         setFirstName("");
