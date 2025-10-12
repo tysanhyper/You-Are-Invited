@@ -1,7 +1,7 @@
 import { type User, type InsertUser, users, rsvps } from "@shared/schema";
 import { type Rsvp, type InsertRsvp } from "@shared/rsvpSchema";
-import { drizzle } from "drizzle-orm/postgres-js";
-import postgres from "postgres";
+import { drizzle } from "drizzle-orm/neon-http";
+import { neon } from "@netlify/neon";
 import { eq } from "drizzle-orm";
 
 export interface IStorage {
@@ -10,6 +10,7 @@ export interface IStorage {
   createUser(user: InsertUser): Promise<User>;
 
   getRsvp(id: string): Promise<Rsvp | undefined>;
+  getAllRsvps(): Promise<Rsvp[]>;
   createRsvp(rsvp: InsertRsvp): Promise<Rsvp>;
 }
 
@@ -17,8 +18,8 @@ export class PostgresStorage implements IStorage {
   private db;
 
   constructor() {
-    const client = postgres(process.env.DATABASE_URL!);
-    this.db = drizzle(client, { schema: { users, rsvps } });
+    const sql = neon(process.env.DATABASE_URL!);
+    this.db = drizzle(sql, { schema: { users, rsvps } });
   }
 
   async getUser(id: string): Promise<User | undefined> {
@@ -57,6 +58,14 @@ export class PostgresStorage implements IStorage {
       result[0].events = JSON.parse(result[0].events as string);
     }
     return result[0];
+  }
+
+  async getAllRsvps(): Promise<Rsvp[]> {
+    const result = await this.db.select().from(rsvps);
+    return result.map((rsvp) => ({
+      ...rsvp,
+      events: JSON.parse(rsvp.events as string),
+    }));
   }
 }
 

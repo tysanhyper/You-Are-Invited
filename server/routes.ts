@@ -11,6 +11,15 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // use storage to perform CRUD operations on the storage interface
   // e.g. storage.insertUser(user) or storage.getUserByUsername(username)
 
+  app.get("/api/rsvp", async (req, res) => {
+    try {
+      const allRsvps = await storage.getAllRsvps();
+      res.json(allRsvps);
+    } catch (error) {
+      res.status(500).json({ error: "Internal server error" });
+    }
+  });
+
   app.post("/api/rsvp", async (req, res) => {
     try {
       const validatedData = insertRsvpSchema.parse(req.body);
