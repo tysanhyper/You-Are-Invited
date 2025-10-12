@@ -181,7 +181,7 @@ const WeddingPage = () => {
             </p>
             <br />
             <p className="text-lg leading-relaxed opacity-90 drop-shadow">
-              Join us as we take off in Ne adventure of our life.
+              Join us as we take off in new adventure of our life.
             </p>
           </div>
           <div className={`transition-all duration-1000 delay-400 ${
