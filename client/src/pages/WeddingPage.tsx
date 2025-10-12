@@ -1,8 +1,55 @@
 import React, { useEffect, useRef, useState } from "react";
+import ImageMarquee from '../components/ImageMarquee';
+import ParticleBackground from '../components/ParticleBackground';
+import FloralAccents from '../components/FloralAccents';
+import VineAccents from '../components/VineAccents';
+
+import MusicPlayer from '../components/MusicPlayer';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 const WeddingPage = () => {
   const [isVisible, setIsVisible] = useState<{ [key: string]: boolean }>({});
   const observerRefs = useRef<{ [key: string]: HTMLElement | null }>({});
+  const { scrollY } = useScroll();
+  const y1 = useTransform(scrollY, [0, 1000], [0, -100]);
+  const y2 = useTransform(scrollY, [0, 1000], [0, -150]);
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 }
+  };
+
+  const hotels = [
+    {
+      name: "Haldi",
+      description: "Join us for the Haldi ceremony on 3rd December 10:00AM in aniket garden for a vibrant celebration of love, laughter, where family and friends come together to bless the couple for their beautiful journey.",
+      buttonText: "Learn More"
+    },
+    {
+      name: "Ring ceremony & Sangeet",
+      description: "Celebrate with us as we begin our journey together! The Ring Ceremony marks the promise of forever, followed by the Mahila Sangeet — a joyous evening of music, dance, and laughter with our loved ones.",
+      buttonText: "Learn More"
+    },
+    {
+      name: "phere and Reception",
+      description: "Join us for the sacred Phere, pledging a lifetime of love, followed by the Reception — an evening of laughter, music, and cherished memories as we begin our new chapter together.",
+      buttonText: "Learn More"
+    }
+  ];
+
+  const scrollToSection = (sectionId: string) => {
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -24,12 +71,38 @@ const WeddingPage = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-white via-gray-50 to-white relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-white via-gray-50 to-white relative overflow-hidden" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23f9f9f9" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="1"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")' }}>
+      <ParticleBackground />
+      <FloralAccents />
+      <VineAccents />
       {/* Decorative Background Elements */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-[#C6754D]/5 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '4s' }}></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#6B2C2C]/5 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '6s', animationDelay: '1s' }}></div>
+        <motion.div
+          className="absolute top-20 left-10 w-72 h-72 bg-[#C6754D]/5 rounded-full blur-3xl animate-pulse"
+          style={{ animationDuration: '4s', y: y1 }}
+        ></motion.div>
+        <motion.div
+          className="absolute bottom-20 right-10 w-96 h-96 bg-[#6B2C2C]/5 rounded-full blur-3xl animate-pulse"
+          style={{ animationDuration: '6s', animationDelay: '1s', y: y2 }}
+        ></motion.div>
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#C6754D]/3 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '8s', animationDelay: '2s' }}></div>
+
+        {/* Floating Stars and Hearts */}
+        <div className="absolute top-10 left-1/4 text-4xl opacity-10 animate-float">✨</div>
+        <div className="absolute top-20 right-1/3 text-4xl opacity-10 animate-float" style={{ animationDelay: '1s' }}>💕</div>
+        <div className="absolute top-1/3 left-10 text-4xl opacity-10 animate-float" style={{ animationDelay: '2s' }}>✨</div>
+        <div className="absolute top-2/3 right-20 text-4xl opacity-10 animate-float" style={{ animationDelay: '0.5s' }}>💕</div>
+        <div className="absolute bottom-1/3 left-1/3 text-4xl opacity-10 animate-float" style={{ animationDelay: '1.5s' }}>✨</div>
+        <div className="absolute bottom-10 right-1/4 text-4xl opacity-10 animate-float" style={{ animationDelay: '2.5s' }}>💕</div>
+        <div className="absolute top-1/4 right-10 text-4xl opacity-10 animate-float" style={{ animationDelay: '3s' }}>✨</div>
+        <div className="absolute top-3/4 left-1/5 text-4xl opacity-10 animate-float" style={{ animationDelay: '0.8s' }}>💕</div>
+        <div className="absolute bottom-1/4 right-1/2 text-4xl opacity-10 animate-float" style={{ animationDelay: '1.2s' }}>✨</div>
+        <div className="absolute top-1/2 left-2/3 text-4xl opacity-10 animate-float" style={{ animationDelay: '2.2s' }}>💕</div>
+        <div className="absolute bottom-20 left-1/6 text-4xl opacity-10 animate-float" style={{ animationDelay: '0.3s' }}>✨</div>
+        <div className="absolute top-40 right-1/6 text-4xl opacity-10 animate-float" style={{ animationDelay: '1.8s' }}>💕</div>
+        <div className="absolute bottom-1/2 left-1/2 text-4xl opacity-10 animate-float" style={{ animationDelay: '2.8s' }}>✨</div>
+        <div className="absolute top-2/5 right-2/3 text-4xl opacity-10 animate-float" style={{ animationDelay: '0.6s' }}>💕</div>
+        <div className="absolute bottom-2/5 left-3/4 text-4xl opacity-10 animate-float" style={{ animationDelay: '1.4s' }}>✨</div>
       </div>
 
       {/* Navigation */}
@@ -37,16 +110,9 @@ const WeddingPage = () => {
         <div className="flex items-center justify-center gap-8 px-8 py-6">
           <a href="#home" className="text-[#2B1105] text-lg font-['Montaga'] opacity-60 hover:opacity-100 hover:scale-110 transition-all duration-300 transform relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#C6754D] hover:after:w-full after:transition-all after:duration-300">Home</a>
           <a href="#our-story" className="text-[#2B1105] text-lg font-['Montaga'] opacity-60 hover:opacity-100 hover:scale-110 transition-all duration-300 transform relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#C6754D] hover:after:w-full after:transition-all after:duration-300">Our Story</a>
+          <img src="https://github.com/tysanhyper/wedding-invitation/blob/main/logo.png?raw=true" alt="Logo" className="w-12 h-12 rounded-full hover:scale-110 transition-all duration-300 -mr-2" />
           <a href="#venue" className="text-[#2B1105] text-lg font-['Montaga'] opacity-60 hover:opacity-100 hover:scale-110 transition-all duration-300 transform relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#C6754D] hover:after:w-full after:transition-all after:duration-300">Events</a>
-          
-          <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#C6754D] to-[#A85D3F] flex items-center justify-center mx-4 hover:scale-110 hover:rotate-12 transition-all duration-300 transform cursor-pointer shadow-lg animate-pulse" style={{ animationDuration: '3s' }}>
-            <svg width="18" height="18" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8 12C10.2091 12 12 10.2091 12 8C12 5.79086 10.2091 4 8 4C5.79086 4 4 5.79086 4 8C4 10.2091 5.79086 12 8 12Z" fill="white"/>
-            </svg>
-          </div>
-
           <a href="#bridal-party" className="text-[#2B1105] text-lg font-['Montaga'] opacity-60 hover:opacity-100 hover:scale-110 transition-all duration-300 transform relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#C6754D] hover:after:w-full after:transition-all after:duration-300">Guests</a>
-          <a href="#registry" className="text-[#2B1105] text-lg font-['Montaga'] opacity-60 hover:opacity-100 hover:scale-110 transition-all duration-300 transform relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#C6754D] hover:after:w-full after:transition-all after:duration-300">Registry</a>
           <a href="#rsvp" className="text-[#2B1105] text-lg font-['Montaga'] opacity-60 hover:opacity-100 hover:scale-110 transition-all duration-300 transform relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#C6754D] hover:after:w-full after:transition-all after:duration-300">RSVP</a>
         </div>
       </nav>
@@ -74,7 +140,7 @@ const WeddingPage = () => {
           <div className="relative group">
             <div className="absolute -inset-1 bg-gradient-to-r from-[#C6754D] via-[#6B2C2C] to-[#C6754D] rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
             <img 
-              src="https://images.unsplash.com/photo-1606800052052-a08af7148866?w=1200&h=600&fit=crop" 
+              src="https://github.com/tysanhyper/wedding-invitation/blob/main/IMG_3180.JPG?raw=true" 
               alt="Yatin & Nisha" 
               className="relative w-full h-[500px] object-cover rounded-2xl shadow-2xl group-hover:scale-[1.02] transition-transform duration-700"
             />
@@ -111,10 +177,18 @@ const WeddingPage = () => {
             </div>
             <h2 className="text-6xl font-['Montaga'] mb-8 drop-shadow-lg">Our Story</h2>
             <p className="text-lg leading-relaxed mb-6 opacity-90 drop-shadow">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+              Ours wasn't just a match, it was meant to be.
+              What started as a casual meeting soon turned into something we both couldn't imagine living without.
             </p>
             <p className="text-lg leading-relaxed opacity-90 drop-shadow">
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              From that very first conversation, something just clicked.
+              It wasn't dramatic or loud — it was the kind of comfort that feels rare, like you've known each other forever.
+              Every chat turned longer, every silence softer, and somewhere between laughter and late-night talks, the line between "you" and "me" started to blur.
+              We stopped being two people trying to understand each other… and became two souls who just did.
+            </p>
+            <br />
+            <p className="text-lg leading-relaxed opacity-90 drop-shadow">
+              
             </p>
           </div>
           <div className={`transition-all duration-1000 delay-400 ${
@@ -123,7 +197,7 @@ const WeddingPage = () => {
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-white/20 to-white/10 rounded-2xl blur-lg opacity-50 group-hover:opacity-75 transition duration-1000"></div>
               <img 
-                src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=600&h=600&fit=crop" 
+                src="https://github.com/tysanhyper/wedding-invitation/blob/main/main%202.jpg?raw=true" 
                 alt="Our Story" 
                 className="relative w-full h-[400px] object-cover rounded-2xl shadow-2xl group-hover:scale-105 transition-transform duration-700"
               />
@@ -156,12 +230,14 @@ const WeddingPage = () => {
             <div className="inline-block px-4 py-2 bg-[#C6754D]/10 rounded-full mb-4">
               <p className="text-[#C6754D] text-sm uppercase tracking-widest">The Venue</p>
             </div>
-            <h2 className="text-6xl font-['Montaga'] text-transparent bg-clip-text bg-gradient-to-r from-[#2B1105] to-[#C6754D] mb-6">Royal Resort Banquet Hall</h2>
+            <h2 className="text-6xl font-['Montaga'] text-transparent bg-clip-text bg-gradient-to-r from-[#2B1105] to-[#C6754D] mb-6">Royal Kesari Banquet Hall</h2>
             <p className="text-lg text-[#2B1105] opacity-80 mb-4 leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              it's where our story turns into forever.
+              It's where we'll look into each other's eyes and say the words that change everything.
+              Where laughter will spill from every corner, where music will carry our joy, and where every face will glow with love and blessings.
             </p>
             <p className="text-lg text-[#2B1105] opacity-80 flex items-center gap-2">
-              <span className="text-2xl">📍</span> 123 Wedding Lane, Celebration City, CC 12345
+              <span className="text-2xl">📍</span> The Royal Kesari, opp. Mayur Mill, Banswara, Rajasthan 327001
             </p>
           </div>
           <div className={`grid grid-cols-2 gap-4 transition-all duration-1000 delay-400 ${
@@ -169,17 +245,17 @@ const WeddingPage = () => {
           }`}>
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-[#C6754D]/30 to-[#6B2C2C]/30 rounded-2xl blur opacity-50 group-hover:opacity-75 transition duration-500"></div>
-              <img 
-                src="https://images.unsplash.com/photo-1519167758481-83f29da8c906?w=400&h=300&fit=crop" 
-                alt="Venue 1" 
-                className="relative w-full h-48 object-cover rounded-2xl hover:scale-110 hover:rotate-2 transition-all duration-500 shadow-xl"
+              <img
+                src="https://raw.githubusercontent.com/tysanhyper/wedding-invitation/main/frame%20(1).png"
+                alt="Venue 1"
+                className="relative w-full h-48 object-contain rounded-2xl hover:scale-110 hover:rotate-2 transition-all duration-500 shadow-xl"
               />
             </div>
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-[#6B2C2C]/30 to-[#C6754D]/30 rounded-2xl blur opacity-50 group-hover:opacity-75 transition duration-500"></div>
-              <img 
-                src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=400&h=300&fit=crop" 
-                alt="Venue 2" 
+              <img
+                src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4npEX_A9tMAl-WBe0oo8DImWXOVj-hIzokksVM9G_tE0VEnYXfQ8Az-8APr1YmnXnEvoXlwt8IA-KbI5GZ_kjTKVbSBrUElocA2hZmxWVI6VbHkcuMX_-36228ngtWzx64DWFG5etg=s680-w680-h510-rw"
+                alt="Venue 2"
                 className="relative w-full h-48 object-cover rounded-2xl hover:scale-110 hover:-rotate-2 transition-all duration-500 shadow-xl"
               />
             </div>
@@ -187,9 +263,9 @@ const WeddingPage = () => {
         </div>
       </section>
 
-      {/* Hotels Section */}
-      <section 
-        id="hotels" 
+      {/* ceremonies sections */}
+      <section
+        id="hotels"
         ref={(el) => (observerRefs.current["hotels"] = el)}
         className={`py-20 px-8 bg-gradient-to-b from-white to-gray-50 scroll-mt-24 transition-all duration-1000 ${
           isVisible["hotels"] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
@@ -197,40 +273,41 @@ const WeddingPage = () => {
       >
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-5xl font-['Montaga'] text-transparent bg-clip-text bg-gradient-to-r from-[#2B1105] to-[#C6754D] mb-4">Accommodations</h2>
-            <p className="text-[#2B1105]/60">We've reserved blocks at these lovely hotels</p>
+            <h2 className="text-5xl font-['Montaga'] text-transparent bg-clip-text bg-gradient-to-r from-[#2B1105] to-[#C6754D] mb-4">Ceremonies</h2>
+            <p className="text-[#2B1105]/60">We would be delighted to have your esteemed presence as we celebrate our union</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[1, 2, 3].map((num, idx) => (
-              <div 
-                key={num} 
-                className={`relative group transition-all duration-700 ${
-                  isVisible["hotels"] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-                }`}
-                style={{ transitionDelay: `${idx * 150}ms` }}
+          <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-8" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+            {hotels.map((hotel, idx) => (
+              <motion.div
+                key={idx}
+                className="relative group"
+                variants={itemVariants}
               >
                 <div className="absolute -inset-1 bg-gradient-to-r from-[#C6754D]/20 to-[#6B2C2C]/20 rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition duration-500"></div>
                 <div className="relative bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100">
                   <div className="w-12 h-12 bg-gradient-to-br from-[#C6754D] to-[#A85D3F] rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <span className="text-white text-xl font-bold">{num}</span>
+                    <span className="text-white text-xl font-bold">{idx + 1}</span>
                   </div>
-                  <h3 className="text-3xl font-['Montaga'] text-[#2B1105] mb-6">Hotel {num}</h3>
+                  <h3 className="text-3xl font-['Montaga'] text-[#2B1105] mb-6">{hotel.name}</h3>
                   <p className="text-lg text-[#2B1105] opacity-80 mb-6 flex-grow leading-relaxed">
-                    Feugiat pretium egestas enim blandit purus euismod. Feugiat magna aliquam lectus lectus eu amet. Eros, accumsan purus enim nascetur.
+                    {hotel.description}
                   </p>
-                  <button className="w-full border-2 border-[#C6754D] text-[#C6754D] px-6 py-3 font-['Montaga'] text-lg rounded-full hover:bg-[#C6754D] hover:text-white transition-all duration-300 hover:scale-105 transform shadow-md hover:shadow-xl">
-                    Learn More
+                  <button
+                    onClick={() => scrollToSection('itinerary')}
+                    className="w-full border-2 border-[#C6754D] text-[#C6754D] px-6 py-3 font-['Montaga'] text-lg rounded-full hover:bg-[#C6754D] hover:text-white transition-all duration-300 hover:scale-105 transform shadow-md hover:shadow-xl cursor-pointer"
+                  >
+                    {hotel.buttonText}
                   </button>
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Bridal Party Section */}
-      <section 
-        id="bridal-party" 
+      <section
+        id="bridal-party"
         ref={(el) => (observerRefs.current["bridal-party"] = el)}
         className={`py-20 px-8 bg-white scroll-mt-24 transition-all duration-1000 ${
           isVisible["bridal-party"] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
@@ -245,15 +322,14 @@ const WeddingPage = () => {
               <div className="w-16 h-px bg-gradient-to-l from-transparent to-[#C6754D]"></div>
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-center">
             {[
               { name: "Groom's Mom", subtitle: "Mother of the Groom" },
-              { name: "Best Man", subtitle: "Best Friend" },
-              { name: "Maid of Honor", subtitle: "Sister" },
-              { name: "Bride's Dad", subtitle: "Father of the Bride" }
+              { name: "Man of Honor", subtitle: "Brother" },
+              { name: "Groom's Dad", subtitle: "Father of the Bride" }
             ].map((person, idx) => (
-              <div 
-                key={idx} 
+              <div
+                key={idx}
                 className={`flex flex-col items-center group transition-all duration-700 ${
                   isVisible["bridal-party"] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
                 }`}
@@ -262,10 +338,10 @@ const WeddingPage = () => {
                 <div className="relative mb-6">
                   <div className="absolute -inset-2 bg-gradient-to-r from-[#C6754D] to-[#6B2C2C] rounded-full blur-md opacity-0 group-hover:opacity-50 transition duration-500"></div>
                   <div className="relative w-40 h-40 rounded-full overflow-hidden ring-4 ring-white shadow-xl group-hover:ring-[#C6754D] transition-all duration-500">
-                    <img 
-                      src={`https://images.unsplash.com/photo-${idx % 2 === 0 ? '1507003211169-0a1dd7228f2d' : '1506794778202-cad84cf45f1d'}?w=200&h=200&fit=crop&crop=faces`}
+                    <img
+                      src={idx === 0 ? "https://raw.githubusercontent.com/tysanhyper/wedding-invitation/645a227446626ff8d0a8e51f679af2a6dde98c61/mom.jpg" : idx === 1 ? "https://raw.githubusercontent.com/tysanhyper/wedding-invitation/ad9dd2f4f3a11aaf91dcdbe352f3091c846aa037/me.jpg" : idx === 2 ? "https://raw.githubusercontent.com/tysanhyper/wedding-invitation/02ff5f2dc8c5d76ba01a4af9b21424dbcae6fd57/dad.jpg" : `https://images.unsplash.com/photo-${idx % 2 === 0 ? '1507003211169-0a1dd7228f2d' : '1506794778202-cad84cf45f1d'}?w=200&h=200&fit=crop&crop=faces`}
                       alt={person.name}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      className={`w-full h-full ${(idx === 0 || idx === 1 || idx === 2) ? 'object-cover object-[position:center_10%]' : 'object-cover'} group-hover:scale-110 transition-transform duration-500`}
                     />
                   </div>
                 </div>
@@ -278,8 +354,8 @@ const WeddingPage = () => {
       </section>
 
       {/* Itinerary Section */}
-      <section 
-        id="itinerary" 
+      <section
+        id="itinerary"
         ref={(el) => (observerRefs.current["itinerary"] = el)}
         className={`py-20 px-8 bg-gradient-to-b from-gray-50 to-white scroll-mt-24 transition-all duration-1000 ${
           isVisible["itinerary"] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
@@ -291,12 +367,12 @@ const WeddingPage = () => {
           </div>
           <div className="space-y-12">
             {[
-              { time: "3:00 PM", title: "Ceremony", description: "Join us for the wedding ceremony at the Royal Resort Banquet Hall. Please arrive 15 minutes early to find your seat.", icon: "💍" },
-              { time: "5:00 PM", title: "Cocktail Hour", description: "Enjoy drinks and hors d'oeuvres while we take photos. Relax and mingle with other guests.", icon: "🥂" },
-              { time: "6:30 PM", title: "Reception", description: "Dinner, dancing, and celebration! Let's party the night away and create unforgettable memories.", icon: "🎉" }
+              { time: "4:00 PM", title: "Ring Ceremony & Sangeet", description: "Join us for the wedding ceremony at the Aniket garden on 3rd December . Please arrive 15 minutes early to find your seat.", icon: "💍" },
+              { time: "11:00 AM", title: "Muscical Phere", description: "Join us for Melodious Phere in Royal Kesari Hall for a night where every beat, note, and harmony tells our love story.", icon: "🥂" },
+              { time: "7:00 PM", title: "Reception", description: "Join us at the Reception in Royal Kesari Hall on 4 December for an evening of love, laughter, and celebration as we begin our life together.", icon: "🎉" }
             ].map((event, idx) => (
-              <div 
-                key={idx} 
+              <div
+                key={idx}
                 className={`flex gap-8 items-start group transition-all duration-700 ${
                   isVisible["itinerary"] ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
                 }`}
@@ -319,47 +395,11 @@ const WeddingPage = () => {
         </div>
       </section>
 
-      {/* Registry Section */}
-      <section 
-        id="registry" 
-        ref={(el) => (observerRefs.current["registry"] = el)}
-        className={`py-20 px-8 bg-white scroll-mt-24 transition-all duration-1000 ${
-          isVisible["registry"] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        }`}
-      >
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-6xl font-['Montaga'] text-transparent bg-clip-text bg-gradient-to-r from-[#2B1105] to-[#C6754D] mb-8">Registry</h2>
-          <p className="text-lg text-[#2B1105] opacity-80 mb-12 leading-relaxed max-w-2xl mx-auto">
-            Your presence is the greatest gift, but if you wish to honor us with a gift, we've registered at the following stores:
-          </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {[
-              { name: "Macy's", icon: "M", gradient: "from-red-500 to-pink-500" },
-              { name: "Belara", icon: "B", gradient: "from-purple-500 to-indigo-500" },
-              { name: "Chloe", icon: "C", gradient: "from-blue-500 to-cyan-500" },
-              { name: "Bloomingdales", icon: "BD", gradient: "from-amber-500 to-orange-500" }
-            ].map((store, idx) => (
-              <div
-                key={store.name}
-                className={`relative group transition-all duration-700 ${
-                  isVisible["registry"] ? "opacity-100 scale-100" : "opacity-0 scale-75"
-                }`}
-                style={{ transitionDelay: `${idx * 100}ms` }}
-              >
-                <div className={`absolute -inset-1 bg-gradient-to-r ${store.gradient} rounded-2xl blur opacity-0 group-hover:opacity-30 transition duration-500`}></div>
-                <button className="relative w-full border-2 border-[#C6754D] bg-white p-8 rounded-2xl hover:bg-gradient-to-br hover:from-[#C6754D] hover:to-[#A85D3F] hover:text-white hover:border-0 transition-all duration-500 hover:scale-110 hover:shadow-2xl transform">
-                  <div className="text-4xl font-bold text-[#C6754D] group-hover:text-white mb-3 group-hover:scale-125 transition-all duration-300">{store.icon}</div>
-                  <div className="text-sm font-['Montaga'] text-[#2B1105] group-hover:text-white transition-colors duration-300">{store.name}</div>
-                </button>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ImageMarquee />
 
       {/* RSVP Section */}
-      <section 
-        id="rsvp" 
+      <section
+        id="rsvp"
         ref={(el) => (observerRefs.current["rsvp"] = el)}
         className={`py-20 px-8 bg-gradient-to-br from-gray-50 via-white to-gray-50 scroll-mt-24 transition-all duration-1000 ${
           isVisible["rsvp"] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
@@ -372,19 +412,19 @@ const WeddingPage = () => {
           </div>
           <div className="relative">
             <div className="absolute -inset-4 bg-gradient-to-r from-[#C6754D]/10 to-[#6B2C2C]/10 rounded-3xl blur-2xl"></div>
-            <form className="relative bg-white p-8 rounded-3xl shadow-2xl space-y-6">
+            <form className="relative bg-white/90 backdrop-blur-sm p-8 rounded-3xl shadow-2xl space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="group">
                   <label className="block text-sm font-['Montaga'] text-[#2B1105] mb-2 group-focus-within:text-[#C6754D] transition-colors duration-300">First Name</label>
-                  <input 
-                    type="text" 
+                  <input
+                    type="text"
                     className="w-full border-b-2 border-gray-200 bg-transparent py-3 focus:outline-none focus:border-[#C6754D] transition-all duration-300 hover:border-[#C6754D]/50"
                   />
                 </div>
                 <div className="group">
                   <label className="block text-sm font-['Montaga'] text-[#2B1105] mb-2 group-focus-within:text-[#C6754D] transition-colors duration-300">Last Name</label>
-                  <input 
-                    type="text" 
+                  <input
+                    type="text"
                     className="w-full border-b-2 border-gray-200 bg-transparent py-3 focus:outline-none focus:border-[#C6754D] transition-all duration-300 hover:border-[#C6754D]/50"
                   />
                 </div>
@@ -392,101 +432,49 @@ const WeddingPage = () => {
 
               <div className="group">
                 <label className="block text-sm font-['Montaga'] text-[#2B1105] mb-2 group-focus-within:text-[#C6754D] transition-colors duration-300">Email</label>
-                <input 
-                  type="email" 
+                <input
+                  type="email"
                   className="w-full border-b-2 border-gray-200 bg-transparent py-3 focus:outline-none focus:border-[#C6754D] transition-all duration-300 hover:border-[#C6754D]/50"
                 />
               </div>
 
-              <div>
-                <label className="block text-sm font-['Montaga'] text-[#2B1105] mb-4">Will you be attending?</label>
-                <div className="flex gap-6">
-                  <label className="flex items-center cursor-pointer group">
-                    <input type="radio" name="attending" value="yes" className="mr-3 w-5 h-5 cursor-pointer accent-[#C6754D]" />
-                    <span className="font-['Montaga'] group-hover:text-[#C6754D] transition-colors duration-300">Yes, I'll be there</span>
-                  </label>
-                  <label className="flex items-center cursor-pointer group">
-                    <input type="radio" name="attending" value="no" className="mr-3 w-5 h-5 cursor-pointer accent-[#C6754D]" />
-                    <span className="font-['Montaga'] group-hover:text-[#C6754D] transition-colors duration-300">Sorry, can't make it</span>
-                  </label>
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="group">
-                  <label className="block text-sm font-['Montaga'] text-[#2B1105] mb-2 group-focus-within:text-[#C6754D] transition-colors duration-300">Number of Guests</label>
-                  <input 
-                    type="number" 
-                    min="1" 
-                    className="w-full border-b-2 border-gray-200 bg-transparent py-3 focus:outline-none focus:border-[#C6754D] transition-all duration-300 hover:border-[#C6754D]/50"
-                  />
-                </div>
-                <div className="group">
-                  <label className="block text-sm font-['Montaga'] text-[#2B1105] mb-2 group-focus-within:text-[#C6754D] transition-colors duration-300">Meal Choice</label>
-                  <select className="w-full border-b-2 border-gray-200 bg-transparent py-3 focus:outline-none focus:border-[#C6754D] transition-all duration-300 hover:border-[#C6754D]/50 cursor-pointer">
-                    <option>Chicken</option>
-                    <option>Beef</option>
-                    <option>Vegetarian</option>
-                  </select>
-                </div>
-                <div className="group">
-                  <label className="block text-sm font-['Montaga'] text-[#2B1105] mb-2 group-focus-within:text-[#C6754D] transition-colors duration-300">Dietary Restrictions</label>
-                  <input 
-                    type="text" 
-                    className="w-full border-b-2 border-gray-200 bg-transparent py-3 focus:outline-none focus:border-[#C6754D] transition-all duration-300 hover:border-[#C6754D]/50"
-                  />
-                </div>
-              </div>
-
               <div className="group">
-                <label className="block text-sm font-['Montaga'] text-[#2B1105] mb-2 group-focus-within:text-[#C6754D] transition-colors duration-300">Special Requests or Notes</label>
-                <textarea 
-                  rows={4}
-                  className="w-full border-2 border-gray-200 bg-transparent py-3 px-4 focus:outline-none focus:border-[#C6754D] transition-all duration-300 hover:border-[#C6754D]/50 rounded-xl"
-                ></textarea>
+                <label className="block text-sm font-['Montaga'] text-[#2B1105] mb-2 group-focus-within:text-[#C6754D] transition-colors duration-300">Notes or Queries</label>
+                <textarea
+                  rows={3}
+                  placeholder="Any additional notes or questions?"
+                  className="w-full border-b-2 border-gray-200 bg-transparent py-3 focus:outline-none focus:border-[#C6754D] transition-all duration-300 hover:border-[#C6754D]/50 resize-none"
+                />
               </div>
 
-              <button 
-                type="submit" 
-                className="relative w-full bg-gradient-to-r from-[#C6754D] to-[#A85D3F] text-white py-4 font-['Montaga'] text-lg rounded-full transition-all duration-500 hover:scale-105 hover:shadow-2xl transform overflow-hidden group"
-              >
-                <span className="relative z-10">Submit RSVP</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-[#A85D3F] to-[#C6754D] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              </button>
+
+              <div className="text-center">
+                <button
+                  type="submit"
+                  className="bg-gradient-to-r from-[#C6754D] to-[#6B2C2C] text-white px-8 py-3 rounded-full font-['Montaga'] text-lg hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-[0_0_20px_rgba(198,117,77,0.5)]"
+                >
+                  Send RSVP
+                </button>
+              </div>
             </form>
           </div>
         </div>
       </section>
 
+      <MusicPlayer />
+
       {/* Footer */}
-      <footer className="py-12 px-8 bg-gradient-to-b from-white to-gray-50 border-t border-gray-100">
+      <footer className="py-12 px-8 bg-[#2B1105] text-white">
         <div className="max-w-7xl mx-auto text-center">
-          <div className="flex justify-center gap-8 mb-6">
-            <a href="#home" className="text-[#2B1105] opacity-60 hover:opacity-100 font-['Montaga'] hover:scale-110 transition-all duration-300 transform">Home</a>
-            <a href="#our-story" className="text-[#2B1105] opacity-60 hover:opacity-100 font-['Montaga'] hover:scale-110 transition-all duration-300 transform">Our Story</a>
-            <a href="#venue" className="text-[#2B1105] opacity-60 hover:opacity-100 font-['Montaga'] hover:scale-110 transition-all duration-300 transform">Events</a>
-            <a href="#registry" className="text-[#2B1105] opacity-60 hover:opacity-100 font-['Montaga'] hover:scale-110 transition-all duration-300 transform">Registry</a>
-          </div>
-          <div className="flex items-center justify-center gap-4 mb-4">
+          <div className="flex items-center justify-center gap-4 mb-6">
             <div className="w-16 h-px bg-gradient-to-r from-transparent to-[#C6754D]"></div>
-            <span className="text-2xl animate-pulse" style={{ animationDuration: '2s' }}>💕</span>
+            <p className="text-[#C6754D] font-['Montaga'] text-lg">Yatin & Nisha</p>
             <div className="w-16 h-px bg-gradient-to-l from-transparent to-[#C6754D]"></div>
           </div>
-          <p className="text-sm text-[#2B1105] opacity-60 font-['Montaga']">
-            Website Design Inspired by Webflow Template • Community
-          </p>
+          <p className="text-sm opacity-80 mb-4">December 5, 2025 • Royal Kesari Banquet Hall</p>
+          <p className="text-sm opacity-60">Made with <motion.span animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 2, repeat: Infinity }}>❤️</motion.span> for our special day</p>
         </div>
       </footer>
-
-      <style>{`
-        @keyframes float {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-20px); }
-        }
-        .animate-float {
-          animation: float 3s ease-in-out infinite;
-        }
-      `}</style>
     </div>
   );
 };
