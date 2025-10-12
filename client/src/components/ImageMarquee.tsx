@@ -18,7 +18,7 @@ const ImageMarquee = () => {
 
   // Initial position: start in the middle set to avoid empty space
   useEffect(() => {
-    const imageWidth = 320; // Approximate width including gap
+    const imageWidth = 200; // Approximate width including gap for mobile
     const offset = -(images.length * imageWidth);
     x.set(offset);
   }, [x]);
@@ -41,7 +41,7 @@ const ImageMarquee = () => {
   // Infinite loop reset
   useEffect(() => {
     const unsubscribe = x.on("change", (latest) => {
-      const imageWidth = 320;
+      const imageWidth = 200; // Match the initial position width
       const totalWidth = images.length * imageWidth;
       if (latest <= -totalWidth) {
         x.set(latest + totalWidth);
@@ -74,7 +74,7 @@ const ImageMarquee = () => {
             key={idx}
             src={img}
             alt={`Memory ${((idx % images.length) + 1)}`}
-            className="w-64 h-48 sm:w-80 sm:h-60 md:w-96 md:h-64 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 flex-shrink-0"
+            className="w-48 h-36 sm:w-64 sm:h-48 md:w-80 md:h-60 lg:w-96 lg:h-64 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300 flex-shrink-0"
             whileHover={{ scale: 1.05 }}
           />
         ))}
