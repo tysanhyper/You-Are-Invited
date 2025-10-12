@@ -23,6 +23,15 @@ const ImageMarquee = () => {
     x.set(offset);
   }, [x]);
 
+  // Auto-scroll animation: move left continuously (3x faster)
+  useEffect(() => {
+    const animate = () => {
+      x.set(x.get() - 3); // Move 3px every frame for 3x faster animation
+      requestAnimationFrame(animate);
+    };
+    animate();
+  }, [x]);
+
   // Mouse wheel support
   useEffect(() => {
     const handleWheel = (e: WheelEvent) => {
