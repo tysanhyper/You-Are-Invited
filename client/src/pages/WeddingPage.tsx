@@ -119,14 +119,14 @@ const WeddingPage = () => {
           <p className="text-[#C6754D] text-xl font-['Montaga'] tracking-widest uppercase">Celebrate With Us</p>
         </div>
         
-        <h1 className="text-8xl font-['Montaga'] text-transparent bg-clip-text bg-gradient-to-r from-[#2B1105] via-[#C6754D] to-[#2B1105] mb-4 opacity-0 animate-fade-in" style={{ animationDelay: '300ms', animationFillMode: 'forwards' }}>
+        <h1 className="text-6xl md:text-8xl font-['Montaga'] text-transparent bg-clip-text bg-gradient-to-r from-[#2B1105] via-[#C6754D] to-[#2B1105] mb-4 opacity-0 animate-fade-in" style={{ animationDelay: '300ms', animationFillMode: 'forwards' }}>
           Yatin & Nisha
         </h1>
-        
-        <div className="flex items-center gap-4 mb-16 opacity-0 animate-fade-in" style={{ animationDelay: '500ms', animationFillMode: 'forwards' }}>
-          <div className="w-24 h-px bg-gradient-to-r from-transparent via-[#C6754D] to-transparent"></div>
-          <p className="text-[#2B1105] font-['Montaga'] text-lg">December 5, 2025</p>
-          <div className="w-24 h-px bg-gradient-to-r from-transparent via-[#C6754D] to-transparent"></div>
+
+        <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 mb-16 opacity-0 animate-fade-in" style={{ animationDelay: '500ms', animationFillMode: 'forwards' }}>
+          <div className="w-16 sm:w-24 h-px bg-gradient-to-r from-transparent via-[#C6754D] to-transparent"></div>
+          <p className="text-[#2B1105] font-['Montaga'] text-base sm:text-lg">December 4, 2025</p>
+          <div className="w-16 sm:w-24 h-px bg-gradient-to-r from-transparent via-[#C6754D] to-transparent"></div>
         </div>
         
         <div className="w-full max-w-5xl opacity-0 animate-fade-up" style={{ animationDelay: '700ms', animationFillMode: 'forwards' }}>
@@ -464,7 +464,7 @@ const WeddingPage = () => {
             <p className="text-[#C6754D] font-['Montaga'] text-lg">Yatin & Nisha</p>
             <div className="w-16 h-px bg-gradient-to-l from-transparent to-[#C6754D]"></div>
           </div>
-          <p className="text-sm opacity-80 mb-4">December 5, 2025 • Royal Kesari Banquet Hall</p>
+          <p className="text-sm opacity-80 mb-4">December 4, 2025 • Royal Kesari Banquet Hall</p>
           <p className="text-sm opacity-60">Made with <motion.span animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 2, repeat: Infinity }}>❤️</motion.span> for our special day</p>
         </div>
       </footer>
