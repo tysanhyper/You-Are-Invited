@@ -1,5 +1,5 @@
-import { motion, useMotionValue } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { motion } from "framer-motion";
+import { useRef } from "react";
 
 const ImageMarquee = () => {
   const images = [
@@ -13,60 +13,7 @@ const ImageMarquee = () => {
   // Duplicate images for infinite loop: duplicates on both ends
   const duplicated = [...images, ...images, ...images]; // 15 images total
 
-  const x = useMotionValue(0);
   const containerRef = useRef<HTMLDivElement>(null);
-
-  // Initial position: start in the middle set to avoid empty space
-  useEffect(() => {
-    const imageWidth = 200; // Approximate width including gap for mobile
-    const offset = -(images.length * imageWidth);
-    x.set(offset);
-  }, [x]);
-
-  // Auto-scroll animation: move left continuously (2x faster)
-  useEffect(() => {
-    let animationId: number;
-    const animate = () => {
-      x.set(x.get() - 2); // Move 2px every frame for 2x faster animation
-      animationId = requestAnimationFrame(animate);
-    };
-    animate();
-
-    return () => {
-      if (animationId) {
-        cancelAnimationFrame(animationId);
-      }
-    };
-  }, []);
-
-  // Mouse wheel support
-  useEffect(() => {
-    const handleWheel = (e: WheelEvent) => {
-      e.preventDefault();
-      const delta = e.deltaX || -e.deltaY * 0.5; // Support horizontal and vertical wheel
-      x.set(x.get() + delta * 0.5); // Adjust sensitivity
-    };
-
-    const container = containerRef.current;
-    if (container) {
-      container.addEventListener("wheel", handleWheel, { passive: false });
-      return () => container.removeEventListener("wheel", handleWheel);
-    }
-  }, [x]);
-
-  // Infinite loop reset
-  useEffect(() => {
-    const unsubscribe = x.on("change", (latest) => {
-      const imageWidth = 200; // Match the initial position width
-      const totalWidth = images.length * imageWidth;
-      if (latest <= -totalWidth) {
-        x.set(latest + totalWidth);
-      } else if (latest >= 0) {
-        x.set(latest - totalWidth);
-      }
-    });
-    return unsubscribe;
-  }, [x]);
 
   return (
     <div className="overflow-hidden relative py-12 bg-gradient-to-r from-gray-50 to-white">
@@ -79,7 +26,17 @@ const ImageMarquee = () => {
       <motion.div
         ref={containerRef}
         className="flex space-x-8 cursor-grab active:cursor-grabbing"
-        style={{ x }}
+        animate={{
+          x: ["0%", "-33.33%"],
+          transition: {
+            x: {
+              repeat: Infinity,
+              repeatType: "loop",
+              duration: 20,
+              ease: "linear",
+            },
+          },
+        }}
         drag="x"
         dragElastic={0.1}
         dragMomentum={true}
