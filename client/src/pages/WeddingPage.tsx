@@ -187,14 +187,15 @@ const WeddingPage = () => {
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-white/20 to-white/10 rounded-2xl blur-lg opacity-50 group-hover:opacity-75 transition duration-1000"></div>
               <video 
-                src="/public/our-story-video.mp4" 
-                controls
+                src="/our-story-videoo.mp4" 
                 autoPlay
                 loop
                 muted
+                playsInline
                 className="relative w-full h-[400px] object-cover rounded-2xl shadow-2xl group-hover:scale-105 transition-transform duration-700"
+                style={{ objectFit: 'cover' }}
               >
-                Your browser does not support the video tag.
+                <img src="/our-story-fallback.gif" alt="Our Story" className="w-full h-[400px] object-cover rounded-2xl shadow-2xl group-hover:scale-105 transition-transform duration-700" />
               </video>
             </div>
           </div>
