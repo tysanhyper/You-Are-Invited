@@ -363,14 +363,6 @@ const WeddingPage = () => {
                 className="relative w-full h-48 object-contain rounded-2xl hover:scale-110 hover:rotate-2 transition-all duration-500 shadow-xl"
               />
             </div>
-            <div className="relative group">
-              <div className="absolute -inset-1 bg-gradient-to-r from-[#6B2C2C]/30 to-[#C6754D]/30 rounded-2xl blur opacity-50 group-hover:opacity-75 transition duration-500"></div>
-              <img
-                src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4npEX_A9tMAl-WBe0oo8DImWXOVj-hIzokksVM9G_tE0VEnYXfQ8Az-8APr1YmnXnEvoXlwt8IA-KbI5GZ_kjTKVbSBrUElocA2hZmxWVI6VbHkcuMX_-36228ngtWzx64DWFG5etg=s680-w680-h510-rw"
-                alt="Venue 2"
-                className="relative w-full h-48 object-cover rounded-2xl hover:scale-110 hover:-rotate-2 transition-all duration-500 shadow-xl"
-              />
-            </div>
           </div>
         </div>
       </section>
