@@ -186,11 +186,16 @@ const WeddingPage = () => {
           }`}>
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-white/20 to-white/10 rounded-2xl blur-lg opacity-50 group-hover:opacity-75 transition duration-1000"></div>
-              <img 
-                src="https://github.com/tysanhyper/wedding-invitation/blob/main/main%202.jpg?raw=true" 
-                alt="Our Story" 
+              <video 
+                src="/public/our-story-video.mp4" 
+                controls
+                autoPlay
+                loop
+                muted
                 className="relative w-full h-[400px] object-cover rounded-2xl shadow-2xl group-hover:scale-105 transition-transform duration-700"
-              />
+              >
+                Your browser does not support the video tag.
+              </video>
             </div>
           </div>
         </div>
