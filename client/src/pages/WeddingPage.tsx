@@ -358,7 +358,7 @@ const WeddingPage = () => {
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-[#C6754D]/30 to-[#6B2C2C]/30 rounded-2xl blur opacity-50 group-hover:opacity-75 transition duration-500"></div>
               <img
-                src="https://github.com/tysanhyper/wedding-invitation/blob/489e5c4a7649584293b2de556742f1e0607cd57d/frame%20(2).png"
+                src="https://raw.githubusercontent.com/tysanhyper/wedding-invitation/main/frame%20(2).png"
                 alt="Venue 1"
                 className="relative w-full h-48 object-contain rounded-2xl hover:scale-110 hover:rotate-2 transition-all duration-500 shadow-xl"
               />
