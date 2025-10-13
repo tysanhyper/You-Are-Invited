@@ -187,7 +187,7 @@ const WeddingPage = () => {
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-white/20 to-white/10 rounded-2xl blur-lg opacity-50 group-hover:opacity-75 transition duration-1000"></div>
               <video 
-                src="/our-story-videoo.mp4" 
+                src="https://github.com/tysanhyper/You-Are-Invited/blob/c3e222bd19e078d31a208ca064b789356d0af0fb/client/public/Videoo.mp4" 
                 autoPlay
                 loop
                 muted
