@@ -374,7 +374,6 @@ const WeddingPage = () => {
           </div>
         </div>
       </section>
-      <ImageMarquee />
       {/* Venue Section */}
       <section 
         id="venue" 
