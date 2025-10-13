@@ -280,12 +280,6 @@ const WeddingPage = () => {
                   <p className="text-lg text-[#2B1105] opacity-80 mb-6 flex-grow leading-relaxed">
                     {hotel.description}
                   </p>
-                  <button
-                    onClick={() => scrollToSection('itinerary')}
-                    className="w-full border-2 border-[#C6754D] text-[#C6754D] px-6 py-3 font-['Montaga'] text-lg rounded-full hover:bg-[#C6754D] hover:text-white transition-all duration-300 hover:scale-105 transform shadow-md hover:shadow-xl cursor-pointer"
-                  >
-                    {hotel.buttonText}
-                  </button>
                 </div>
               </motion.div>
             ))}
@@ -333,6 +327,54 @@ const WeddingPage = () => {
           </div>
         </div>
       </section>
+      {/* Venue Section */}
+      <section 
+        id="venue" 
+        ref={(el) => (observerRefs.current["venue"] = el)}
+        className={`py-20 px-8 bg-white scroll-mt-24 transition-all duration-1000 ${
+          isVisible["venue"] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}
+      >
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div className={`transition-all duration-1000 delay-200 ${
+            isVisible["venue"] ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
+          }`}>
+            <div className="inline-block px-4 py-2 bg-[#C6754D]/10 rounded-full mb-4">
+              <p className="text-[#C6754D] text-sm uppercase tracking-widest">The Venue</p>
+            </div>
+            <h2 className="text-6xl font-['Montaga'] text-transparent bg-clip-text bg-gradient-to-r from-[#2B1105] to-[#C6754D] mb-6">Aniket Garden </h2>
+            <p className="text-lg text-[#2B1105] opacity-80 mb-4 leading-relaxed">
+              the perfect stage for joy and celebration — a beautiful open space filled with charm and color. 
+              From the vibrant hues of the Haldi to the music and laughter of the Mahila Sangeet, and the sparkle of the Ring Ceremony,
+              every moment here blooms with love and togetherness.
+            </p>
+            <p className="text-lg text-[#2B1105] opacity-80 flex items-center gap-2">
+              <span className="text-2xl">📍</span> The Aniket Garden, opp. Utsav Hotel, Banswara, Rajasthan 327001
+            </p>
+          </div>
+          <div className={`grid grid-cols-2 gap-4 transition-all duration-1000 delay-400 ${
+            isVisible["venue"] ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
+          }`}>
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-[#C6754D]/30 to-[#6B2C2C]/30 rounded-2xl blur opacity-50 group-hover:opacity-75 transition duration-500"></div>
+              <img
+                src="https://raw.githubusercontent.com/tysanhyper/wedding-invitation/main/frame%20(1).png"
+                alt="Venue 1"
+                className="relative w-full h-48 object-contain rounded-2xl hover:scale-110 hover:rotate-2 transition-all duration-500 shadow-xl"
+              />
+            </div>
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-[#6B2C2C]/30 to-[#C6754D]/30 rounded-2xl blur opacity-50 group-hover:opacity-75 transition duration-500"></div>
+              <img
+                src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4npEX_A9tMAl-WBe0oo8DImWXOVj-hIzokksVM9G_tE0VEnYXfQ8Az-8APr1YmnXnEvoXlwt8IA-KbI5GZ_kjTKVbSBrUElocA2hZmxWVI6VbHkcuMX_-36228ngtWzx64DWFG5etg=s680-w680-h510-rw"
+                alt="Venue 2"
+                className="relative w-full h-48 object-cover rounded-2xl hover:scale-110 hover:-rotate-2 transition-all duration-500 shadow-xl"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <ImageMarquee />
       {/* Venue Section */}
       <section 
         id="venue" 
