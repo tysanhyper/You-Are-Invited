@@ -358,7 +358,7 @@ const WeddingPage = () => {
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-[#C6754D]/30 to-[#6B2C2C]/30 rounded-2xl blur opacity-50 group-hover:opacity-75 transition duration-500"></div>
               <img
-                src="https://raw.githubusercontent.com/tysanhyper/wedding-invitation/main/frame%20(1).png"
+                src="https://github.com/tysanhyper/wedding-invitation/blob/489e5c4a7649584293b2de556742f1e0607cd57d/frame%20(2).png"
                 alt="Venue 1"
                 className="relative w-full h-48 object-contain rounded-2xl hover:scale-110 hover:rotate-2 transition-all duration-500 shadow-xl"
               />
@@ -366,7 +366,7 @@ const WeddingPage = () => {
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-[#6B2C2C]/30 to-[#C6754D]/30 rounded-2xl blur opacity-50 group-hover:opacity-75 transition duration-500"></div>
               <img
-                src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4npEX_A9tMAl-WBe0oo8DImWXOVj-hIzokksVM9G_tE0VEnYXfQ8Az-8APr1YmnXnEvoXlwt8IA-KbI5GZ_kjTKVbSBrUElocA2hZmxWVI6VbHkcuMX_-36228ngtWzx64DWFG5etg=s680-w680-h510-rw"
+                src="https://content3.jdmagicbox.com/v2/comp/banswara/k4/9999p2962.2962.231222005833.f7k4/catalogue/aniket-garden-sharda-colony-banswara-banquet-halls-sa3hmazbul.jpg"
                 alt="Venue 2"
                 className="relative w-full h-48 object-cover rounded-2xl hover:scale-110 hover:-rotate-2 transition-all duration-500 shadow-xl"
               />
