@@ -257,6 +257,44 @@ const WeddingPage = () => {
           </div>
         </div>
         {/* Brides Party Sections */}
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <div className="flex items-center justify-center gap-4 mt-4">
+              <div className="w-16 h-px bg-gradient-to-r from-transparent to-[#C6754D]"></div>
+              <p className="text-[#C6754D] font-['Montaga']">Bride's maid</p>
+              <div className="w-16 h-px bg-gradient-to-l from-transparent to-[#C6754D]"></div>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 justify-center">
+            {[
+              { name: "Brides's Mom", subtitle: "Mother of the Bride" },
+              { name: "Bride's Dad", subtitle: "Father of the Bride" },
+              { name: "Man of Honor", subtitle: "Brother" },
+              { name: "Maid of Honour", subtitle: "Sister" }
+            ].map((person, idx) => (
+              <div
+                key={idx}
+                className={`flex flex-col items-center group transition-all duration-700 ${
+                  isVisible["bridal-party"] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+                }`}
+                style={{ transitionDelay: `${idx * 100}ms` }}
+              >
+                <div className="relative mb-6">
+                  <div className="absolute -inset-2 bg-gradient-to-r from-[#C6754D] to-[#6B2C2C] rounded-full blur-md opacity-0 group-hover:opacity-50 transition duration-500"></div>
+                  <div className="relative w-40 h-40 rounded-full overflow-hidden ring-4 ring-white shadow-xl group-hover:ring-[#C6754D] transition-all duration-500">
+                    <img
+                      src={idx === 0 ? "https://raw.githubusercontent.com/tysanhyper/You-Are-Invited/refs/heads/main/client/public/her%20mother.jpg" : idx === 2 ? " https://raw.githubusercontent.com/tysanhyper/You-Are-Invited/main/client/public/her%20brother.jpg" : idx === 1 ? "https://raw.githubusercontent.com/tysanhyper/You-Are-Invited/refs/heads/main/client/public/her%20father.jpg" : idx === 3 ? "https://raw.githubusercontent.com/tysanhyper/You-Are-Invited/refs/heads/main/client/public/her%20sister.jpg" : `https://images.unsplash.com/photo-${idx % 2 === 0 ? '1507003211169-0a1dd7228f2d' : '1506794778202-cad84cf45f1d'}?w=200&h=200&fit=crop&crop=faces`}
+                      alt={person.name}
+                      className={`w-full h-full ${idx === 3 ? 'object-cover object-[position:50%_4%] scale-90' : (idx === 0 || idx === 1 || idx === 2) ? 'object-cover object-[position:center_10%]' : 'object-cover'} group-hover:scale-110 transition-transform duration-500 mx-auto`}
+                    />
+                  </div>
+                </div>
+                <h4 className="text-xl font-['Montaga'] text-[#2B1105] mb-2 group-hover:text-[#C6754D] transition-colors duration-300">{person.name}</h4>
+                <p className="text-sm text-[#2B1105] opacity-60">{person.subtitle}</p>
+              </div>
+            ))}
+          </div>
+        </div>
         
       </section>
       {/* ceremonies sections */}
