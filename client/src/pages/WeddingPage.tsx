@@ -256,7 +256,7 @@ const WeddingPage = () => {
             ))}
           </div>
         </div>
-        {/* Brides Party Section */}
+        {/* Brides Party Sections */}
         
       </section>
       {/* ceremonies sections */}
