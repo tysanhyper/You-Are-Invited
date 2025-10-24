@@ -44,13 +44,13 @@ const WeddingPage = () => {
     {
       name: "Ring ceremony & Sangeet",
       description: (
-        <>Celebrate with us as we begin our journey together! On <span className="font-bold text-[#C6754D]">3rd December</span> in <span className="font-bold text-[#C6754D]">Aniket Garden</span> The Ring Ceremony marks the promise of forever, followed by the Mahila Sangeet — a joyous evening of music, dance, and laughter with our loved ones.</>
+        <>Celebrate with us  on <span className="font-bold text-[#C6754D]">3rd December</span> in <span className="font-bold text-[#C6754D]">Aniket Garden</span> as we begin our journey together!The Ring Ceremony marks the promise of forever, followed by the Mahila Sangeet — a joyous evening of music, dance, and laughter with our loved ones.</>
       ),
     },
     {
       name: "Phere and Reception",
       description: (
-        <>Join us On <span className="font-bold text-[#C6754D]">4th December</span> in <span className="font-bold text-[#C6754D]">Royal Kesari Banquet Hall</span>, all for the sacred Phere, pledging a lifetime of love, followed by the Reception — an evening of laughter, music, and cherished memories as we begin our new chapter together.</>
+        <>Join us on <span className="font-bold text-[#C6754D]">4th December</span> in <span className="font-bold text-[#C6754D]">Royal Kesari Banquet Hall</span>, all for the sacred Phere, pledging a lifetime of love, followed by the Reception — an evening of laughter, music, and cherished memories as we begin our new chapter together.</>
       ),
     }
   ];
