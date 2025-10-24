@@ -109,7 +109,7 @@ const WeddingPage = () => {
 
         {/* Logo above Celebrate With Us */}
         <div className="flex justify-center mb-6 opacity-0 animate-fade-in" style={{ animationDelay: '50ms', animationFillMode: 'forwards' }}>
-          <img src="https://github.com/tysanhyper/wedding-invitation/blob/main/logo.png?raw=true" alt="Logo" className="w-20 h-20 rounded-full hover:scale-110 transition-all duration-300" />
+          <img src="https://github.com/tysanhyper/wedding-invitation/blob/main/logo2.jpg?raw=true" alt="Logo" className="w-20 h-20 rounded-full hover:scale-110 transition-all duration-300" />
         </div>
 
 
