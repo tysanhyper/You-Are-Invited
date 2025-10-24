@@ -7,6 +7,11 @@ import VineAccents from '../components/VineAccents';
 import MusicPlayer from '../components/MusicPlayer';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
+interface Hotel {
+  name: string;
+  description: React.ReactNode;
+}
+
 const WeddingPage = () => {
   const [isVisible, setIsVisible] = useState<{ [key: string]: boolean }>({});
   const observerRefs = useRef<{ [key: string]: HTMLElement | null }>({});
@@ -29,18 +34,24 @@ const WeddingPage = () => {
     visible: { opacity: 1, y: 0 }
   };
 
-  const hotels = [
+  const hotels: Hotel[] = [
     {
       name: "Haldi",
-      description: "Join us for the Haldi ceremony on 3rd December 10:00AM in aniket garden for a vibrant celebration of love, laughter, where family and friends come together to bless the couple for their beautiful journey.",
+      description: (
+        <>Join us for the Haldi ceremony on <span className="font-bold text-[#C6754D]">3rd December</span> <span className="font-bold text-[#C6754D]">10:00AM</span> in <span className="font-bold text-[#C6754D]">Aniket Garden</span> for a vibrant celebration of love, laughter, where family and friends come together to bless the couple for their beautiful journey.</>
+      ),
     },
     {
       name: "Ring ceremony & Sangeet",
-      description: "Celebrate with us as we begin our journey together! The Ring Ceremony marks the promise of forever, followed by the Mahila Sangeet — a joyous evening of music, dance, and laughter with our loved ones.",
+      description: (
+        <>Celebrate with us as we begin our journey together! On <span className="font-bold text-[#C6754D]">3rd December</span> in <span className="font-bold text-[#C6754D]">Aniket Garden</span> The Ring Ceremony marks the promise of forever, followed by the Mahila Sangeet — a joyous evening of music, dance, and laughter with our loved ones.</>
+      ),
     },
     {
       name: "Phere and Reception",
-      description: "Join us for the sacred Phere, pledging a lifetime of love, followed by the Reception — an evening of laughter, music, and cherished memories as we begin our new chapter together.",
+      description: (
+        <>Join us On <span className="font-bold text-[#C6754D]">4th December</span> in <span className="font-bold text-[#C6754D]">Royal Kesari Banquet Hall</span>, all for the sacred Phere, pledging a lifetime of love, followed by the Reception — an evening of laughter, music, and cherished memories as we begin our new chapter together.</>
+      ),
     }
   ];
 
