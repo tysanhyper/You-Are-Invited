@@ -109,7 +109,7 @@ const WeddingPage = () => {
 
         {/* Logo above Celebrate With Us */}
         <div className="flex justify-center mb-6 opacity-0 animate-fade-in" style={{ animationDelay: '50ms', animationFillMode: 'forwards' }}>
-          <img src="https://github.com/tysanhyper/wedding-invitation/blob/main/logo2.jpg?raw=true" alt="Logo" className="w-20 h-20 rounded-full hover:scale-110 transition-all duration-300" />
+          <img src="https://github.com/tysanhyper/wedding-invitation/blob/main/logo3.jpg?raw=true" alt="Logo" className="w-20 h-20 rounded-full hover:scale-110 transition-all duration-300" />
         </div>
 
 
@@ -120,9 +120,13 @@ const WeddingPage = () => {
           <p className="text-[#6B2C2C] text-xl font-['Montaga'] italic tracking-[0.3em] lowercase">the wedding of</p>
         </div>
 
-        <h1 className="text-5xl md:text-7xl lg:text-9xl font-['Montaga'] text-transparent bg-clip-text bg-gradient-to-r from-[#2B1105] via-[#C6754D] to-[#2B1105] mb-4 opacity-0 animate-fade-in whitespace-nowrap" style={{ animationDelay: '300ms', animationFillMode: 'forwards' }}>
+        <h1 className="text-5xl md:text-7xl lg:text-9xl font-['Montaga'] text-transparent bg-clip-text bg-gradient-to-r from-[#2B1105] via-[#C6754D] to-[#2B1105] mb-1 opacity-0 animate-fade-in whitespace-nowrap" style={{ animationDelay: '300ms', animationFillMode: 'forwards' }}>
           Yatin & Nisha
         </h1>
+
+        <div className="opacity-0 animate-fade-in" style={{ animationDelay: '350ms', animationFillMode: 'forwards' }}>
+          <p className="text-[#6B2C2C] text-sm md:text-base font-['Montaga'] tracking-wide">#NiYati</p>
+        </div>
 
         <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 mb-16 opacity-0 animate-fade-in" style={{ animationDelay: '500ms', animationFillMode: 'forwards' }}>
           <div className="w-16 sm:w-24 h-px bg-gradient-to-r from-transparent via-[#C6754D] to-transparent"></div>
