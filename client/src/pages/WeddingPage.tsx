@@ -210,7 +210,7 @@ const WeddingPage = () => {
           <div className="w-16 h-px bg-gradient-to-l from-transparent to-[#C6754D]"></div>
         </div>
       </div>
-         {/* Bridal Party Section */}
+         {/* Grooms Party Section */}
       <section
         id="bridal-party"
         ref={(el) => (observerRefs.current["bridal-party"] = el)}
@@ -232,6 +232,43 @@ const WeddingPage = () => {
               { name: "Groom's Mom", subtitle: "Mother of the Groom" },
               { name: "Man of Honor", subtitle: "Brother" },
               { name: "Groom's Dad", subtitle: "Father of the Groom" }
+            ].map((person, idx) => (
+              <div
+                key={idx}
+                className={`flex flex-col items-center group transition-all duration-700 ${
+                  isVisible["bridal-party"] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+                }`}
+                style={{ transitionDelay: `${idx * 100}ms` }}
+              >
+                <div className="relative mb-6">
+                  <div className="absolute -inset-2 bg-gradient-to-r from-[#C6754D] to-[#6B2C2C] rounded-full blur-md opacity-0 group-hover:opacity-50 transition duration-500"></div>
+                  <div className="relative w-40 h-40 rounded-full overflow-hidden ring-4 ring-white shadow-xl group-hover:ring-[#C6754D] transition-all duration-500">
+                    <img
+                      src={idx === 0 ? "https://raw.githubusercontent.com/tysanhyper/wedding-invitation/645a227446626ff8d0a8e51f679af2a6dde98c61/mom.jpg" : idx === 1 ? "https://raw.githubusercontent.com/tysanhyper/wedding-invitation/ad9dd2f4f3a11aaf91dcdbe352f3091c846aa037/me.jpg" : idx === 2 ? "https://raw.githubusercontent.com/tysanhyper/wedding-invitation/02ff5f2dc8c5d76ba01a4af9b21424dbcae6fd57/dad.jpg" : `https://images.unsplash.com/photo-${idx % 2 === 0 ? '1507003211169-0a1dd7228f2d' : '1506794778202-cad84cf45f1d'}?w=200&h=200&fit=crop&crop=faces`}
+                      alt={person.name}
+                      className={`w-full h-full ${(idx === 0 || idx === 1 || idx === 2) ? 'object-cover object-[position:center_10%]' : 'object-cover'} group-hover:scale-110 transition-transform duration-500 mx-auto`}
+                    />
+                  </div>
+                </div>
+                <h4 className="text-xl font-['Montaga'] text-[#2B1105] mb-2 group-hover:text-[#C6754D] transition-colors duration-300">{person.name}</h4>
+                <p className="text-sm text-[#2B1105] opacity-60">{person.subtitle}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <div className="flex items-center justify-center gap-4 mt-4">
+              <div className="w-16 h-px bg-gradient-to-r from-transparent to-[#C6754D]"></div>
+              <p className="text-[#C6754D] font-['Montaga']">Bride's maid</p>
+              <div className="w-16 h-px bg-gradient-to-l from-transparent to-[#C6754D]"></div>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-center">
+            {[
+              { name: "Brides's Mom", subtitle: "Mother of the Bride" },
+              { name: "Maid of Honor", subtitle: "Sister" },
+              { name: "Bride's Dad", subtitle: "Father of the Bride" }
             ].map((person, idx) => (
               <div
                 key={idx}
@@ -292,6 +329,7 @@ const WeddingPage = () => {
           </motion.div>
         </div>
       </section>
+      
        {/* Itinerary Section */}
       <section
         id="itinerary"
