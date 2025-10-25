@@ -125,7 +125,8 @@ const WeddingPage = () => {
 
 
         <div className="text-center mb-2 opacity-0 animate-fade-in" style={{ animationDelay: '100ms', animationFillMode: 'forwards' }}>
-          <p className="text-[#C6754D] text-lg sm:text-2xl font-['Montaga'] tracking-widest uppercase whitespace-nowrap">Celebrate With Us</p>
+          <p className="text-[#C6754D] text-lg sm:text-4xl font-['Montaga'] tracking-widest uppercase whitespace-nowrap">Celebrate With Us</p>
+          <p className="text-[#C6754D] text-lg sm:text-1xl font-['Montaga'] tracking-widest uppercase whitespace-nowrap">As we begin our Forever</p>
         </div>
         <div className="text-center mb-8 opacity-0 animate-fade-in" style={{ animationDelay: '150ms', animationFillMode: 'forwards' }}>
         </div>
@@ -196,7 +197,7 @@ const WeddingPage = () => {
             </p>
             <br />
             <p className="text-base sm:text-lg leading-relaxed opacity-90 drop-shadow">
-              Join us as we take off into new adventure of our life.
+              Join us as we take off into a new adventure together.
             </p>
           </div>
           <div className={`transition-all duration-1000 delay-400 ${
@@ -280,6 +281,7 @@ const WeddingPage = () => {
             <div className="flex items-center justify-center gap-4 mt-4">
               <div className="w-12 sm:w-16 h-px bg-gradient-to-r from-transparent to-[#C6754D]"></div>
               <p className="text-[#C6754D] font-['Montaga']"></p>
+              <div className="text-2xl animate-bounce" style={{ animationDuration: '2s' }}>🌸</div>
               <div className="w-12 sm:w-16 h-px bg-gradient-to-l from-transparent to-[#C6754D]"></div>
             </div>
           </div>
@@ -287,7 +289,7 @@ const WeddingPage = () => {
             {[
               { name: "Brides's Mom", subtitle: "" },
               { name: "Bride's Dad", subtitle: "" },
-              { name: "Man of Honor", subtitle: "Brother" },
+              { name: "Brother", subtitle: "sister-in-law" },
               { name: "Maid of Honour", subtitle: "Sister" }
             ].map((person, idx) => (
               <div
@@ -309,7 +311,7 @@ const WeddingPage = () => {
                 </div>
                 <h4 className="text-lg sm:text-xl font-['Montaga'] text-[#2B1105] mb-2 group-hover:text-[#C6754D] transition-colors duration-300">{person.name}</h4>
                 <p className="text-xs sm:text-sm text-[#2B1105] opacity-60">{person.subtitle}</p>
-              </div>
+               </div>
             ))}
           </div>
         </div>
