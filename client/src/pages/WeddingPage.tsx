@@ -96,27 +96,27 @@ const WeddingPage = () => {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#C6754D]/3 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '8s', animationDelay: '2s' }}></div>
 
         {/* Floating Stars and Hearts */}
-        <div className="absolute top-10 left-1/4 text-2xl sm:text-4xl opacity-10 animate-float">✨</div>
-        <div className="absolute top-20 right-1/3 text-2xl sm:text-4xl opacity-10 animate-float" style={{ animationDelay: '1s' }}>💕</div>
-        <div className="absolute top-1/3 left-10 text-2xl sm:text-4xl opacity-10 animate-float" style={{ animationDelay: '2s' }}>✨</div>
-        <div className="absolute top-2/3 right-20 text-2xl sm:text-4xl opacity-10 animate-float" style={{ animationDelay: '0.5s' }}>💕</div>
-        <div className="absolute bottom-1/3 left-1/3 text-2xl sm:text-4xl opacity-10 animate-float" style={{ animationDelay: '1.5s' }}>✨</div>
-        <div className="absolute bottom-10 right-1/4 text-2xl sm:text-4xl opacity-10 animate-float" style={{ animationDelay: '2.5s' }}>💕</div>
-        <div className="absolute top-1/4 right-10 text-2xl sm:text-4xl opacity-10 animate-float" style={{ animationDelay: '3s' }}>✨</div>
-        <div className="absolute top-3/4 left-1/5 text-2xl sm:text-4xl opacity-10 animate-float" style={{ animationDelay: '0.8s' }}>💕</div>
-        <div className="absolute bottom-1/4 right-1/2 text-2xl sm:text-4xl opacity-10 animate-float" style={{ animationDelay: '1.2s' }}>✨</div>
-        <div className="absolute top-1/2 left-2/3 text-2xl sm:text-4xl opacity-10 animate-float" style={{ animationDelay: '2.2s' }}>💕</div>
-        <div className="absolute bottom-20 left-1/6 text-2xl sm:text-4xl opacity-10 animate-float" style={{ animationDelay: '0.3s' }}>✨</div>
-        <div className="absolute top-40 right-1/6 text-2xl sm:text-4xl opacity-10 animate-float" style={{ animationDelay: '1.8s' }}>💕</div>
-        <div className="absolute bottom-1/2 left-1/2 text-2xl sm:text-4xl opacity-10 animate-float" style={{ animationDelay: '2.8s' }}>✨</div>
-        <div className="absolute top-2/5 right-2/3 text-2xl sm:text-4xl opacity-10 animate-float" style={{ animationDelay: '0.6s' }}>💕</div>
-        <div className="absolute bottom-2/5 left-3/4 text-2xl sm:text-4xl opacity-10 animate-float" style={{ animationDelay: '1.4s' }}>✨</div>
+        <div className="absolute top-10 left-1/4 text-4xl opacity-10 animate-float">✨</div>
+        <div className="absolute top-20 right-1/3 text-4xl opacity-10 animate-float" style={{ animationDelay: '1s' }}>💕</div>
+        <div className="absolute top-1/3 left-10 text-4xl opacity-10 animate-float" style={{ animationDelay: '2s' }}>✨</div>
+        <div className="absolute top-2/3 right-20 text-4xl opacity-10 animate-float" style={{ animationDelay: '0.5s' }}>💕</div>
+        <div className="absolute bottom-1/3 left-1/3 text-4xl opacity-10 animate-float" style={{ animationDelay: '1.5s' }}>✨</div>
+        <div className="absolute bottom-10 right-1/4 text-4xl opacity-10 animate-float" style={{ animationDelay: '2.5s' }}>💕</div>
+        <div className="absolute top-1/4 right-10 text-4xl opacity-10 animate-float" style={{ animationDelay: '3s' }}>✨</div>
+        <div className="absolute top-3/4 left-1/5 text-4xl opacity-10 animate-float" style={{ animationDelay: '0.8s' }}>💕</div>
+        <div className="absolute bottom-1/4 right-1/2 text-4xl opacity-10 animate-float" style={{ animationDelay: '1.2s' }}>✨</div>
+        <div className="absolute top-1/2 left-2/3 text-4xl opacity-10 animate-float" style={{ animationDelay: '2.2s' }}>💕</div>
+        <div className="absolute bottom-20 left-1/6 text-4xl opacity-10 animate-float" style={{ animationDelay: '0.3s' }}>✨</div>
+        <div className="absolute top-40 right-1/6 text-4xl opacity-10 animate-float" style={{ animationDelay: '1.8s' }}>💕</div>
+        <div className="absolute bottom-1/2 left-1/2 text-4xl opacity-10 animate-float" style={{ animationDelay: '2.8s' }}>✨</div>
+        <div className="absolute top-2/5 right-2/3 text-4xl opacity-10 animate-float" style={{ animationDelay: '0.6s' }}>💕</div>
+        <div className="absolute bottom-2/5 left-3/4 text-4xl opacity-10 animate-float" style={{ animationDelay: '1.4s' }}>✨</div>
         </div>
 
       {/* Hero Section */}
       <section id="home" className="relative flex flex-col items-center py-16 sm:py-32 px-4 sm:px-8 mt-0 scroll-mt-24">
-        <div className="absolute top-10 left-1/4 text-4xl sm:text-6xl opacity-10 animate-float">✨</div>
-        <div className="absolute bottom-20 right-1/4 text-4xl sm:text-6xl opacity-10 animate-float" style={{ animationDelay: '2s' }}>💕</div>
+        <div className="absolute top-10 left-1/4 text-2xl sm:text-6xl opacity-10 animate-float">✨</div>
+        <div className="absolute bottom-20 right-1/4 text-2xl sm:text-6xl opacity-10 animate-float" style={{ animationDelay: '2s' }}>💕</div>
 
         {/* Logo above Celebrate With Us */}
         <div className="flex justify-center mb-6 opacity-0 animate-fade-in" style={{ animationDelay: '50ms', animationFillMode: 'forwards' }}>
@@ -125,24 +125,23 @@ const WeddingPage = () => {
 
 
         <div className="text-center mb-2 opacity-0 animate-fade-in" style={{ animationDelay: '100ms', animationFillMode: 'forwards' }}>
-          <p className="text-[#C6754D] text-xl sm:text-2xl font-['Montaga'] tracking-widest uppercase whitespace-nowrap">Celebrate With Us</p>
+          <p className="text-[#C6754D] text-lg sm:text-2xl font-['Montaga'] tracking-widest uppercase whitespace-nowrap">Celebrate With Us</p>
         </div>
         <div className="text-center mb-8 opacity-0 animate-fade-in" style={{ animationDelay: '150ms', animationFillMode: 'forwards' }}>
-          <p className="text-[#6B2C2C] text-lg sm:text-xl font-['Montaga'] italic tracking-[0.3em] lowercase">the wedding of</p>
         </div>
 
-        <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-['Montaga'] text-transparent bg-clip-text bg-gradient-to-r from-[#2B1105] via-[#C6754D] to-[#2B1105] mb-1 opacity-0 animate-fade-in whitespace-nowrap" style={{ animationDelay: '300ms', animationFillMode: 'forwards' }}>
-          Yatin & Nisha
+        <h1 className="text-3xl sm:text-5xl md:text-7xl lg:text-9xl font-['Montaga'] text-transparent bg-clip-text bg-gradient-to-r from-[#2B1105] via-[#C6754D] to-[#2B1105] mb-1 opacity-0 animate-fade-in whitespace-nowrap" style={{ animationDelay: '300ms', animationFillMode: 'forwards' }}>
+          Nisha & Yatin
         </h1>
 
         <div className="opacity-0 animate-fade-in" style={{ animationDelay: '350ms', animationFillMode: 'forwards' }}>
-          <p className="text-[#6B2C2C] text-sm md:text-base font-['Montaga'] tracking-wide">#NiYati</p>
+          <p className="text-[#6B2C2C] text-xs sm:text-sm md:text-base font-['Montaga'] tracking-wide">#NiYati</p>
         </div>
 
         <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 mb-16 opacity-0 animate-fade-in" style={{ animationDelay: '500ms', animationFillMode: 'forwards' }}>
-          <div className="w-16 sm:w-24 h-px bg-gradient-to-r from-transparent via-[#C6754D] to-transparent"></div>
-          <p className="text-[#2B1105] font-['Montaga'] text-base sm:text-lg">December 4, 2025</p>
-          <div className="w-16 sm:w-24 h-px bg-gradient-to-r from-transparent via-[#C6754D] to-transparent"></div>
+          <div className="w-12 sm:w-16 md:w-24 h-px bg-gradient-to-r from-transparent via-[#C6754D] to-transparent"></div>
+          <p className="text-[#2B1105] font-['Montaga'] text-sm sm:text-base md:text-lg">December 4, 2025</p>
+          <div className="w-12 sm:w-16 md:w-24 h-px bg-gradient-to-r from-transparent via-[#C6754D] to-transparent"></div>
         </div>
 
         <div className="w-full max-w-5xl opacity-0 animate-fade-up" style={{ animationDelay: '700ms', animationFillMode: 'forwards' }}>
@@ -197,7 +196,7 @@ const WeddingPage = () => {
             </p>
             <br />
             <p className="text-base sm:text-lg leading-relaxed opacity-90 drop-shadow">
-              Join us as we take off in new adventure of our life.
+              Join us as we take off into new adventure of our life.
             </p>
           </div>
           <div className={`transition-all duration-1000 delay-400 ${
@@ -229,7 +228,7 @@ const WeddingPage = () => {
           <div className="w-16 h-px bg-gradient-to-l from-transparent to-[#C6754D]"></div>
         </div>
       </div>
-         {/* Grooms Party Section */}
+         {/* Wedding Party Section */}
       <section
         id="bridal-party"
         ref={(el) => (observerRefs.current["bridal-party"] = el)}
@@ -241,9 +240,9 @@ const WeddingPage = () => {
           <div className="text-center mb-12">
             <h2 className="text-4xl sm:text-6xl font-['Montaga'] text-transparent bg-clip-text bg-gradient-to-r from-[#2B1105] to-[#C6754D] mb-4">The Wedding Party</h2>
             <div className="flex items-center justify-center gap-4 mt-4">
-              <div className="w-16 h-px bg-gradient-to-r from-transparent to-[#C6754D]"></div>
+              <div className="w-12 sm:w-16 h-px bg-gradient-to-r from-transparent to-[#C6754D]"></div>
               <p className="text-[#C6754D] font-['Montaga']">Groomsmen</p>
-              <div className="w-16 h-px bg-gradient-to-l from-transparent to-[#C6754D]"></div>
+              <div className="w-12 sm:w-16 h-px bg-gradient-to-l from-transparent to-[#C6754D]"></div>
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 justify-center">
@@ -270,7 +269,7 @@ const WeddingPage = () => {
                   </div>
                 </div>
                 <h4 className="text-lg sm:text-xl font-['Montaga'] text-[#2B1105] mb-2 group-hover:text-[#C6754D] transition-colors duration-300">{person.name}</h4>
-                <p className="text-sm text-[#2B1105] opacity-60">{person.subtitle}</p>
+                <p className="text-xs sm:text-sm text-[#2B1105] opacity-60">{person.subtitle}</p>
               </div>
             ))}
           </div>
@@ -279,9 +278,9 @@ const WeddingPage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <div className="flex items-center justify-center gap-4 mt-4">
-              <div className="w-16 h-px bg-gradient-to-r from-transparent to-[#C6754D]"></div>
+              <div className="w-12 sm:w-16 h-px bg-gradient-to-r from-transparent to-[#C6754D]"></div>
               <p className="text-[#C6754D] font-['Montaga']">Bride's maid</p>
-              <div className="w-16 h-px bg-gradient-to-l from-transparent to-[#C6754D]"></div>
+              <div className="w-12 sm:w-16 h-px bg-gradient-to-l from-transparent to-[#C6754D]"></div>
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 sm:gap-6 justify-center">
@@ -309,7 +308,7 @@ const WeddingPage = () => {
                   </div>
                 </div>
                 <h4 className="text-lg sm:text-xl font-['Montaga'] text-[#2B1105] mb-2 group-hover:text-[#C6754D] transition-colors duration-300">{person.name}</h4>
-                <p className="text-sm text-[#2B1105] opacity-60">{person.subtitle}</p>
+                <p className="text-xs sm:text-sm text-[#2B1105] opacity-60">{person.subtitle}</p>
               </div>
             ))}
           </div>
@@ -320,16 +319,16 @@ const WeddingPage = () => {
       <section
         id="hotels"
         ref={(el) => (observerRefs.current["hotels"] = el)}
-        className={`py-20 px-8 bg-gradient-to-b from-white to-gray-50 scroll-mt-24 transition-all duration-1000 ${
+        className={`py-20 px-4 sm:px-8 bg-gradient-to-b from-white to-gray-50 scroll-mt-24 transition-all duration-1000 ${
           isVisible["hotels"] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-5xl font-['Montaga'] text-transparent bg-clip-text bg-gradient-to-r from-[#2B1105] to-[#C6754D] mb-4">Ceremonies</h2>
-            <p className="text-[#2B1105]/60">We would be delighted to have your esteemed presence as we celebrate our union</p>
+            <h2 className="text-3xl sm:text-5xl font-['Montaga'] text-transparent bg-clip-text bg-gradient-to-r from-[#2B1105] to-[#C6754D] mb-4">Ceremonies</h2>
+            <p className="text-sm sm:text-base text-[#2B1105]/60">We would be delighted to have your esteemed presence as we celebrate our union</p>
           </div>
-          <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-8" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+          <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             {hotels.map((hotel, idx) => (
               <motion.div
                 key={idx}
@@ -337,12 +336,12 @@ const WeddingPage = () => {
                 variants={itemVariants}
               >
                 <div className="absolute -inset-1 bg-gradient-to-r from-[#C6754D]/20 to-[#6B2C2C]/20 rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition duration-500"></div>
-                <div className="relative bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100">
-                  <div className="w-12 h-12 bg-gradient-to-br from-[#C6754D] to-[#A85D3F] rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <span className="text-white text-xl font-bold">{idx + 1}</span>
+                <div className="relative bg-white p-6 sm:p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-[#C6754D] to-[#A85D3F] rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <span className="text-white text-lg sm:text-xl font-bold">{idx + 1}</span>
                   </div>
-                  <h3 className="text-3xl font-['Montaga'] text-[#2B1105] mb-6">{hotel.name}</h3>
-                  <p className="text-lg text-[#2B1105] opacity-80 mb-6 flex-grow leading-relaxed">
+                  <h3 className="text-2xl sm:text-3xl font-['Montaga'] text-[#2B1105] mb-6">{hotel.name}</h3>
+                  <p className="text-base sm:text-lg text-[#2B1105] opacity-80 mb-6 flex-grow leading-relaxed">
                     {hotel.description}
                   </p>
                 </div>
@@ -366,7 +365,9 @@ const WeddingPage = () => {
           </div>
           <div className="space-y-8 sm:space-y-12">
             {[
-              { time: "4:00 PM,", title: "Ring Ceremony & Sangeet", description: "On 3rd December,Join us for the wedding ceremony at the Aniket garden. Please arrive 15 minutes early to find your seat.", icon: "💍" },
+              { time: "9:00 AM,", title: "Haldi ", description: "On 3rd December,Join us for the Haldi celebration at the Aniket Garden for a joyful ritual where loved ones bless the couple with turmeric, laughter, and vibrant traditions for a radiant start to married life.", icon: "💛" },
+              { time: "4:00 PM,", title: "Ring Ceremony ", description: "On 3rd December,Join us for the wedding ceremony at the Aniket Garden. Please arrive 15 minutes early to find your seat.", icon: "💍" },
+              { time: "7:30 PM", title: "Sangeet", description: "On 3 December, Join us at the Reception in Aniket Garden for an evening filled with joy and energy of performances.", icon: "🪩" },
               { time: "11:00 AM", title: "Muscical Phere", description: "On 4th December, Join us for Melodious Phere in Royal Kesari Hall for a night where every beat, note, and harmony tells our love story.", icon: "🥂" },
               { time: "7:00 PM", title: "Reception", description: "On 4 December, Join us at the Reception in Royal Kesari Hall for an evening of love, laughter, and celebration as we begin our life together.", icon: "🎉" }
             ].map((event, idx) => (
@@ -381,7 +382,7 @@ const WeddingPage = () => {
                   <div className="absolute -inset-2 bg-gradient-to-r from-[#C6754D] to-[#6B2C2C] rounded-full blur-md opacity-0 group-hover:opacity-50 transition duration-500"></div>
                   <div className="relative w-16 h-16 sm:w-24 sm:h-24 rounded-full border-2 border-[#C6754D] bg-white flex flex-col items-center justify-center group-hover:bg-gradient-to-br group-hover:from-[#C6754D] group-hover:to-[#A85D3F] group-hover:scale-110 group-hover:border-0 transition-all duration-500 shadow-lg">
                     <span className="text-[#C6754D] text-xs font-['Montaga'] group-hover:text-white transition-colors duration-300">{event.time}</span>
-                    <span className="text-xl sm:text-2xl mt-1 group-hover:scale-125 transition-transform duration-300">{event.icon}</span>
+                    <span className="text-lg sm:text-2xl mt-1 group-hover:scale-125 transition-transform duration-300">{event.icon}</span>
                   </div>
                 </div>
                 <div className="flex-grow">
@@ -415,7 +416,7 @@ const WeddingPage = () => {
               every moment here blooms with love and togetherness.
             </p>
             <p className="text-base sm:text-lg text-[#2B1105] opacity-80 flex items-center gap-2">
-              <span className="text-2xl">📍</span> The Aniket Garden, opp. Utsav Hotel, Banswara, Rajasthan 327001
+              <span className="text-xl sm:text-2xl">📍</span> The Aniket Garden, opp. Utsav Hotel, Banswara, Rajasthan 327001
             </p>
           </div>
           <div className={`grid grid-cols-2 gap-4 transition-all duration-1000 delay-400 ${
@@ -442,15 +443,15 @@ const WeddingPage = () => {
       </section>
       {/* Venue Section */}
       <section
-        id="venue"
-        ref={(el) => (observerRefs.current["venue"] = el)}
+        id="venue2"
+        ref={(el) => (observerRefs.current["venue2"] = el)}
         className={`py-20 px-4 sm:px-8 bg-white scroll-mt-24 transition-all duration-1000 ${
-          isVisible["venue"] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          isVisible["venue2"] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 items-center">
           <div className={`transition-all duration-1000 delay-200 ${
-            isVisible["venue"] ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
+            isVisible["venue2"] ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
           }`}>
             <div className="inline-block px-4 py-2 bg-[#C6754D]/10 rounded-full mb-4">
               <p className="text-[#C6754D] text-sm uppercase tracking-widest">The Venue</p>
@@ -462,11 +463,11 @@ const WeddingPage = () => {
               Where laughter will spill from every corner, where music will carry our joy, and where every face will glow with love and blessings.
             </p>
             <p className="text-base sm:text-lg text-[#2B1105] opacity-80 flex items-center gap-2">
-              <span className="text-2xl">📍</span> The Royal Kesari, opp. Mayur Mill, Banswara, Rajasthan 327001
+              <span className="text-xl sm:text-2xl">📍</span> The Royal Kesari, opp. Mayur Mill, Banswara, Rajasthan 327001
             </p>
           </div>
           <div className={`grid grid-cols-2 gap-4 transition-all duration-1000 delay-400 ${
-            isVisible["venue"] ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
+            isVisible["venue2"] ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
           }`}>
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-[#C6754D]/30 to-[#6B2C2C]/30 rounded-2xl blur opacity-50 group-hover:opacity-75 transition duration-500"></div>
@@ -491,15 +492,15 @@ const WeddingPage = () => {
       <MusicPlayer />
 
       {/* Footer */}
-      <footer className="py-12 px-8 bg-[#2B1105] text-white">
+      <footer className="py-12 px-4 sm:px-8 bg-[#2B1105] text-white">
         <div className="max-w-7xl mx-auto text-center">
           <div className="flex items-center justify-center gap-4 mb-6">
-            <div className="w-16 h-px bg-gradient-to-r from-transparent to-[#C6754D]"></div>
-            <p className="text-[#C6754D] font-['Montaga'] text-lg">Yatin & Nisha</p>
-            <div className="w-16 h-px bg-gradient-to-l from-transparent to-[#C6754D]"></div>
+            <div className="w-12 sm:w-16 h-px bg-gradient-to-r from-transparent to-[#C6754D]"></div>
+            <p className="text-[#C6754D] font-['Montaga'] text-base sm:text-lg">Yatin & Nisha</p>
+            <div className="w-12 sm:w-16 h-px bg-gradient-to-l from-transparent to-[#C6754D]"></div>
           </div>
-          <p className="text-sm opacity-80 mb-4">December 4, 2025 • Royal Kesari Banquet Hall</p>
-          <p className="text-sm opacity-60">Made with <motion.span animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 2, repeat: Infinity }}>❤️</motion.span> for our special day</p>
+          <p className="text-xs sm:text-sm opacity-80 mb-4">December 4, 2025 • Royal Kesari Banquet Hall</p>
+          <p className="text-xs sm:text-sm opacity-60">Made with <motion.span animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 2, repeat: Infinity }}>❤️</motion.span> for our special day</p>
         </div>
       </footer>
     </div>
