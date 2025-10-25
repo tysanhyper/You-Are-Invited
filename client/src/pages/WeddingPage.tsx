@@ -241,7 +241,7 @@ const WeddingPage = () => {
             <h2 className="text-4xl sm:text-6xl font-['Montaga'] text-transparent bg-clip-text bg-gradient-to-r from-[#2B1105] to-[#C6754D] mb-4">The Wedding Party</h2>
             <div className="flex items-center justify-center gap-4 mt-4">
               <div className="w-12 sm:w-16 h-px bg-gradient-to-r from-transparent to-[#C6754D]"></div>
-              <p className="text-[#C6754D] font-['Montaga']">Groomsmen</p>
+              <p className="text-[#C6754D] font-['Montaga']"></p>
               <div className="w-12 sm:w-16 h-px bg-gradient-to-l from-transparent to-[#C6754D]"></div>
             </div>
           </div>
@@ -279,7 +279,7 @@ const WeddingPage = () => {
           <div className="text-center mb-12">
             <div className="flex items-center justify-center gap-4 mt-4">
               <div className="w-12 sm:w-16 h-px bg-gradient-to-r from-transparent to-[#C6754D]"></div>
-              <p className="text-[#C6754D] font-['Montaga']">Bride's maid</p>
+              <p className="text-[#C6754D] font-['Montaga']"></p>
               <div className="w-12 sm:w-16 h-px bg-gradient-to-l from-transparent to-[#C6754D]"></div>
             </div>
           </div>
@@ -496,7 +496,7 @@ const WeddingPage = () => {
         <div className="max-w-7xl mx-auto text-center">
           <div className="flex items-center justify-center gap-4 mb-6">
             <div className="w-12 sm:w-16 h-px bg-gradient-to-r from-transparent to-[#C6754D]"></div>
-            <p className="text-[#C6754D] font-['Montaga'] text-base sm:text-lg">Yatin & Nisha</p>
+            <p className="text-[#C6754D] font-['Montaga'] text-base sm:text-lg">Nisha & Yatin</p>
             <div className="w-12 sm:w-16 h-px bg-gradient-to-l from-transparent to-[#C6754D]"></div>
           </div>
           <p className="text-xs sm:text-sm opacity-80 mb-4">December 4, 2025 • Royal Kesari Banquet Hall</p>
