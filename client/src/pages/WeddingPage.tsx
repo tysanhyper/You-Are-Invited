@@ -44,7 +44,7 @@ const WeddingPage = () => {
     {
       name: "Ring ceremony & Sangeet",
       description: (
-        <>Celebrate with us  on <span className="font-bold text-[#C6754D]">3rd December</span> in <span className="font-bold text-[#C6754D]">Aniket Garden</span> as we begin our journey together!The Ring Ceremony marks the promise of forever, followed by the Mahila Sangeet — a joyous evening of music, dance, and laughter with our loved ones.</>
+        <>Celebrate with us  on <span className="font-bold text-[#C6754D]">3rd December</span> in <span className="font-bold text-[#C6754D]">Aniket Garden</span> as we begin our journey together! The Ring Ceremony marks the promise of forever, followed by the Mahila Sangeet — a joyous evening of music, dance, and laughter with our loved ones.</>
       ),
     },
     {
@@ -289,7 +289,7 @@ const WeddingPage = () => {
             {[
               { name: "Brides's Mom", subtitle: "" },
               { name: "Bride's Dad", subtitle: "" },
-              { name: "Brother", subtitle: "sister-in-law" },
+              { name: "Brother & sister-in-law", subtitle: "" },
               { name: "Maid of Honour", subtitle: "Sister" }
             ].map((person, idx) => (
               <div
@@ -367,11 +367,11 @@ const WeddingPage = () => {
           </div>
           <div className="space-y-8 sm:space-y-12">
             {[
-              { time: "9:00 AM,", title: "Haldi ", description: "On 3rd December,Join us for the Haldi celebration at the Aniket Garden for a joyful ritual where loved ones bless the couple with turmeric, laughter, and vibrant traditions for a radiant start to married life.", icon: "💛" },
-              { time: "4:00 PM,", title: "Ring Ceremony ", description: "On 3rd December,Join us for the wedding ceremony at the Aniket Garden. Please arrive 15 minutes early to find your seat.", icon: "💍" },
-              { time: "7:30 PM", title: "Sangeet", description: "On 3 December, Join us at the Reception in Aniket Garden for an evening filled with joy and energy of performances.", icon: "🪩" },
-              { time: "11:00 AM", title: "Muscical Phere", description: "On 4th December, Join us for Melodious Phere in Royal Kesari Hall for a night where every beat, note, and harmony tells our love story.", icon: "🥂" },
-              { time: "7:00 PM", title: "Reception", description: "On 4 December, Join us at the Reception in Royal Kesari Hall for an evening of love, laughter, and celebration as we begin our life together.", icon: "🎉" }
+              { time: "9:00 AM,", title: "Haldi ", description: "On 3rd December, Join us for the Haldi celebration at the Aniket Garden for a joyful ritual where loved ones bless the couple with turmeric, laughter, and vibrant traditions for a radiant start to married life.", icon: "💛" },
+              { time: "4:00 PM,", title: "Ring Ceremony ", description: "On 3rd December, Join us for the wedding ceremony at the Aniket Garden. Please arrive 15 minutes early to find your seat.", icon: "💍" },
+              { time: "7:30 PM", title: "Sangeet", description: "On 3rd December, Join us at the Reception in Aniket Garden for an evening filled with joy and energy of performances.", icon: "🪩" },
+              { time: "11:00 AM", title: "Musical Phere", description: "On 4th December, Join us for Melodious Phere in Royal Kesari Hall for a night where every beat, note, and harmony tells our love story.", icon: "🥂" },
+              { time: "7:00 PM", title: "Reception", description: "On 4th December, Join us at the Reception in Royal Kesari Hall for an evening of love, laughter, and celebration as we begin our life together.", icon: "🎉" }
             ].map((event, idx) => (
               <div
                 key={idx}
@@ -413,7 +413,7 @@ const WeddingPage = () => {
             </div>
             <h2 className="text-4xl sm:text-6xl font-['Montaga'] text-transparent bg-clip-text bg-gradient-to-r from-[#2B1105] to-[#C6754D] mb-6">Aniket Garden </h2>
             <p className="text-base sm:text-lg text-[#2B1105] opacity-80 mb-4 leading-relaxed">
-              the perfect stage for joy and celebration — a beautiful open space filled with charm and color.
+              The perfect stage for joy and celebration — a beautiful open space filled with charm and color.
               From the vibrant hues of the Haldi to the music and laughter of the Mahila Sangeet, and the sparkle of the Ring Ceremony,
               every moment here blooms with love and togetherness.
             </p>
@@ -460,7 +460,7 @@ const WeddingPage = () => {
             </div>
             <h2 className="text-4xl sm:text-6xl font-['Montaga'] text-transparent bg-clip-text bg-gradient-to-r from-[#2B1105] to-[#C6754D] mb-6">Royal Kesari Banquet Hall</h2>
             <p className="text-base sm:text-lg text-[#2B1105] opacity-80 mb-4 leading-relaxed">
-              it's where our story turns into forever.
+              It's where our story turns into forever.
               It's where we'll look into each other's eyes and say the words that change everything.
               Where laughter will spill from every corner, where music will carry our joy, and where every face will glow with love and blessings.
             </p>
