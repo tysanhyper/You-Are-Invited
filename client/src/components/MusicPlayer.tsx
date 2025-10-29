@@ -11,9 +11,33 @@ const MusicPlayer: React.FC = () => {
     if (audioRef.current) {
       audioRef.current.volume = volume;
       // Attempt to auto-play on mount
-      audioRef.current.play().catch(() => {
-        // Auto-play blocked, user will need to click play
-      });
+      const playAudio = async () => {
+        try {
+          await audioRef.current!.play();
+          setIsPlaying(true);
+        } catch (error) {
+          // Auto-play blocked, set up fallback for first user interaction
+          const handleFirstInteraction = () => {
+            if (audioRef.current) {
+              audioRef.current.play().then(() => {
+                setIsPlaying(true);
+              }).catch(() => {
+                // If still blocked, user will need to click play button
+              });
+            }
+            // Remove the event listener after first interaction
+            document.removeEventListener('click', handleFirstInteraction);
+            document.removeEventListener('touchstart', handleFirstInteraction);
+            document.removeEventListener('keydown', handleFirstInteraction);
+          };
+
+          document.addEventListener('click', handleFirstInteraction);
+          document.addEventListener('touchstart', handleFirstInteraction);
+          document.addEventListener('keydown', handleFirstInteraction);
+        }
+      };
+
+      playAudio();
     }
   }, [volume]);
 
